@@ -1,0 +1,26 @@
+{
+  "name": "JSC2015",
+  "version": "1.0.0",
+  "description": "JSChannel Conference 2015",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/toamitkumar/jschannel-2015.git"
+  },
+  "keywords": [
+    "JSC",
+    "2015"
+  ],
+  "author": "Amit Kumar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toamitkumar/jschannel-2015/issues"
+  },
+  "homepage": "https://github.com/toamitkumar/jschannel-2015",
+  "dependencies": {
+    "hapi": "^8.1.0"
+  }
+}
