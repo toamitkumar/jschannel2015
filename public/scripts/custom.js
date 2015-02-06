@@ -208,25 +208,6 @@ $(document).ready(function () {
 		$('.register-box').append('<button class="btn btn-large btn-primary disabled" disabled="true" id="register-button">Sold Out</button>');
 	}
 	
-	// Twitter Feed //
-	$('.tweet').twittie({
-		dateFormat: '%B %d, %Y',
-		template: '<div class="date">{{date}}</div> {{tweet}}',
-		count: 3, // define the number of tweets to be displayed, if it's one, read the lines below
-		hideReplies: true
-	});
-	// if you want to display only one tweet, please remove the following lines:
-	// if so, don't forget you need to change style.css line 1036 display property to display: block;
-	setInterval(function () {
-		var item = $('.tweet ul').find('li:first');
-		item.animate({
-			'opacity': '0'
-		}, 1000, function () {
-			$(this).detach().appendTo('.tweet ul').removeAttr('style');
-		});
-	}, 12000);
-	
-	
 	// Google Map //
 	$('#map_canvas').gmap({
 		'center': new google.maps.LatLng(40.77288, -73.98299), // Change this to your desired latitude and longitude

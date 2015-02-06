@@ -21,6 +21,13 @@
   },
   "homepage": "https://github.com/toamitkumar/jschannel-2015",
   "dependencies": {
-    "hapi": "^8.1.0"
+    "async": "*",
+    "boom": "^2.6.1",
+    "hapi": "^8.1.0",
+    "joi": "^5.1.0",
+    "lodash": "*",
+    "mongoose": "^3.8.21",
+    "qs": "*",
+    "superagent": "^0.21.0"
   }
 }

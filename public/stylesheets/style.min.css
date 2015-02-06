@@ -1873,6 +1873,9 @@ a.rss:hover {
     }
 }
 @media only screen and (max-width: 459px) {
+    .jumbotron h2 {
+      font-size: 50px;
+    }
     .navbar .btn-navbar {
         margin: 18px 0 0 !important;
     }
@@ -1948,4 +1951,43 @@ a.coming-soon:hover span {
 }
 a.coming-soon:hover:before {
   content: "Coming Soon!"
+}
+
+.team-member {
+  text-align: center;
+  margin-bottom: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: none repeat scroll 0 0 #fff;
+  border: medium none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  img {
+    margin: 0 auto;
+    border: 7px solid white;
+  }
+  h4 {
+    margin-top: 25px;
+    margin-bottom: 0;
+    text-transform: none;
+    color: @brand-danger;
+  }
+  p {
+    margin-top: 0;
+  }
+}
+.team-member:hover {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, .05);
+}
+
+.sponsor-us {
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-top: 40px;
 }
