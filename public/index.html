@@ -111,11 +111,11 @@
         </ul>
       </div>
       <div class="row sponsor-us">
-        <div class="span3 text-center"></div>
-        <div class="span6 text-center">
-          <a href="#" class="btn btn-large btn-block"><span>Want to Sponsor?</span></a> 
+        <div class="span4 text-center"></div>
+        <div class="span4 text-center">
+          <a href="doc/JSChannel_Sponsorship_2015.pdf" target="_blank" class="btn btn-large btn-block"><span>Want to Sponsor?</span></a> 
         </div>
-        <div class="span3 text-center"></div>
+        <div class="span4 text-center"></div>
       </div>
     </div>
   </section>
@@ -174,8 +174,7 @@
           </div>
         </div>
         <div class="span12 hero-unit text-center white">
-          <h2>Learn From These Great Folks</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dapibus iaculis porta. Vivamus mattis tempus aliquet.</p>
+          <h2>Learn From These Great Speakers</h2>
         </div>
         <div class="span12">
           <div class="divider-space"></div>
@@ -261,14 +260,14 @@
   <section id="newsletter">
     <div class="container">
       <div class="row">
-        <div class="span12 hero-unit text-center">
+        <div class="span12 hero-unit text-center white">
           <h2>Subscribe to Our Updates</h2>
         </div>
-        <form action="/api/users/subscribe" method="post">
+        <form action="/api/users/subscribe" method="POST" id="subscription">
           <div class="control-group span4 offset4 text-center">
             <div class="controls">
-              <input type="email" id="subscribe-email" class="input-block-level" placeholder="Your Email Address" required="">
-              <input type="submit" class="btn btn-primary" value="Send Message">
+              <input type="email" id="subscribe-email" name="email" class="input-block-level" placeholder="Your Email Address" required="">
+              <input type="submit" class="btn btn-primary" value="Subscribe" id="subscribe">
             </div>
           </div>
         </form>
@@ -927,44 +926,48 @@
             <h4>What it's look like here?</h4>
           </div>
         </div>
-        <ul class="event-items">
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/01.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/02.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/03.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/04.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/05.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/06.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/07.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/08.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/09.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/10.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/11.jpg"/>
-          </li>
-          <li class="event-item clearfix span2">
-            <img src="images/gallery/12.jpg"/>
-          </li>
-        </ul>
+        <div class="span12">
+          <ul class="event-items">
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/01.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/02.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/03.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/04.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/05.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/06.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/07.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/08.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <img src="images/gallery/09.jpg"/>
+            </li>
+            <li class="event-item clearfix span2 text-center">
+              <div>
+                <a href="https://www.flickr.com/photos/100543192@N08/sets/72157646036037789/" target="_blank"><i class="iconf-right-open"></i>More</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="span3">
+          <iframe src="https://www.youtube.com/embed/0zrUhLZptuo" width="200" height="200" allowfullscreen></iframe>
+        </div>
+        <div class="span3">
+            <iframe src="https://www.youtube.com/embed/0zrUhLZptuo" width="200" height="200" allowfullscreen></iframe>
+        </div> -->
       </div>
     </div>
   </section>
@@ -1133,9 +1136,9 @@
         <div class="span4 text-center">
           <p>
             <ul class="list-inline quicklinks">
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="javascript:void(0)" ng-click="openModal('conduct')">Code of Conduct</a></li>
+              <li><a href="javascript:void(0)">Privacy Policy</a></li>
+              <li><a href="javascript:void(0)">Terms of Use</a></li>
+              <li><a href="" data-toggle="modal" data-target="#modal-cod">Code of Conduct</a></li>
             </ul>
           </p>
         </div>
@@ -1155,13 +1158,49 @@
             </a>
             <a href="http://lanyrd.com/2015/jschannelconf2015/" target="_blank" title="Lanyrd" class="icon-wrap small lanyrd"> <i class="iconf-lanyrd"></i> 
             </a>
-            <a href="https://www.youtube.com/channel/UCdf_Ezv2lcB9OKE_4N23w1A" target="_blank" title="Youtube" class="icon-wrap small youtube"> <i class="iconf-youtube"></i> 
+            <a href="https://www.youtube.com/channel/UCdf_Ezv2lcB9OKE_4N23w1A/videos" target="_blank" title="Youtube" class="icon-wrap small youtube"> <i class="iconf-youtube"></i> 
             </a>
           </div>
         </div>
       </div>
     </div>
   </section>
+
+  <div class="modal hide fade" id="modal-cod" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3>Code of Coduct</h3>
+    </div>
+    <div class="modal-body">
+      <div class="code-conduct code-conduct-info">
+        <h4>tl;dr: Be excellent with each other</h4>
+        <p>All attendees, speakers, sponsors and volunteers at our conference are required to agree with the following code of conduct. Organisers will enforce this code throughout the event. We are expecting cooperation from all participants to help ensuring a safe environment for everybody.</p>
+      </div>
+
+      <div class="code-conduct code-conduct-info-shorter">
+        <h4>The Quick Version</h4>
+        <p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, age, sexual orientation, disability, physical appearance, body size, race, or religion (or lack thereof). We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.</p>
+      </div>
+              
+      <div class="code-conduct code-conduct-info-longer">
+        <h4>The Less Quick Version</h4>
+        <p>Harassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. Participants asked to stop any harassing behavior are expected to comply immediately. Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment. If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts. Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.We expect participants to follow these rules at conference and workshop venues and conference-related social events.</p>
+      </div>
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Need Help?</h3>
+        </div>
+        <div class="panel-body">
+          Amit Kumar&nbsp;&nbsp;<i class="fa fa-mobile-phone">+91 9619483353</i><br/>
+          Niraj Bhandari&nbsp;&nbsp;<i class="fa fa-mobile-phone">+91 9663411944</i><br/>
+          Naresh Sharma&nbsp;&nbsp;<i class="fa fa-mobile-phone">+91 9741594633</i><br/>
+          Suman Paul&nbsp;&nbsp;<i class="fa fa-mobile-phone">+91 9945458300</i>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer"> <a data-dismiss="modal" class="btn">Close</a> </div>
+  </div>
 
   <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
   <script type="text/javascript" src="scripts/jquery.plugin.js"></script>

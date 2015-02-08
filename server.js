@@ -2,7 +2,8 @@
 'use strict';
 
 var Hapi = require('hapi'),
-	Routes = require('./routes');
+	Routes = require('./routes'),
+	Database = require('./config/database');
     
 var app = {};
 

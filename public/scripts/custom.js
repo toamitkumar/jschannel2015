@@ -62,6 +62,30 @@ $(document).ready(function () {
 			'height': viewHeight
 		});
 	});
+
+	$("#subscription").submit(function(e) {
+		e.preventDefault();
+
+		var submitUrl = $(this).attr('action');
+    $.ajax({
+      url: submitUrl,
+      type: 'POST',
+      data: $(this).serialize(),
+      dataType: "json",
+      beforeSend: function () {
+  	    $('#submit').attr('disabled', 'disabled');
+        $('#subscription').fadeOut('slow').html('<div class="alert alert-info">Please wait...<a href="#" class="close">&times;</a></div>').fadeIn('slow');
+      },
+      success: function(data) {
+      	console.log('success', data)
+        $('#subscription').html('<div class="alert alert-success">Thanks for Subscribing!<a href="#" class="close">&times;</a></div>').fadeIn('slow');
+      },
+      error: function(data, textS, err) {
+      	$('#subscription').html('<div class="alert alert-error">'+JSON.parse(data.responseText).message+'<a href="#" class="close">&times;</a></div>').fadeIn('slow');
+      }
+    });
+    return false;
+	});
 	
 	// Flexslider
 	// Can also be used with $(document).ready()
@@ -133,7 +157,7 @@ $(document).ready(function () {
 			.drawArc({
 				layer: true,
 				name: "days",
-				strokeStyle: "rgba(0,0,0,0);",
+				strokeStyle: "rgba(0,0,0,0)",
 				strokeWidth: 10,
 				x: 0, //71
 				y: 0,  //100
@@ -181,7 +205,7 @@ $(document).ready(function () {
 	}
 
 	function countdownAnimation() {
-		$("canvas")
+		$("#circular_countdown_days")
 		.animateLayer("days", {
 			end:$('#countdown_timer ul li.days em').text() * 0.9863
 		}, "fast", "swing")
