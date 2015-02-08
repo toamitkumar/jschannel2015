@@ -2069,3 +2069,8 @@ a.coming-soon:hover:before {
   display: inline-table;
   line-height: 5;
 }
+
+.list-inline li {
+  display: inline;
+  padding-right: 4px;
+}
