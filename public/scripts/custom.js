@@ -234,7 +234,7 @@ $(document).ready(function () {
 	
 	// Google Map //
 	$('#map_canvas').gmap({
-		'center': new google.maps.LatLng(40.77288, -73.98299), // Change this to your desired latitude and longitude
+		'center': new google.maps.LatLng(12.9732486, 77.6197981), // Change this to your desired latitude and longitude
 		'zoom': 17,
 		'mapTypeControl': false,
 		'navigationControl': false,
@@ -256,9 +256,9 @@ $(document).ready(function () {
 		}]
 	});
 	var image = {
-		url: 'images/marker.png', // Define the map marker file here
+		url: 'images/marker.png',
 		// This marker is 51 pixels wide by 63 pixels tall.
-		size: new google.maps.Size(51, 63),
+		size: new google.maps.Size(40, 30),
 		// The origin for this image is 0,0.
 		origin: new google.maps.Point(0, 0),
 		// The anchor for this image is the base of the flagpole at 26,63.
@@ -267,12 +267,12 @@ $(document).ready(function () {
 	$('#map_canvas').gmap().bind('init', function () {
 		$('#map_canvas').gmap('addMarker', {
 			'id': 'marker-1',
-			'position': '40.77288,-73.98299',
+			'position': '12.9732486, 77.6197981',
 			'bounds': false,
 			'icon': image
 		}).click(function () {
 			$('#map_canvas').gmap('openInfoWindow', {
-				'content': '<h4>Eventify</h4><p><strong>Downtown Conference Center</strong><br>Columbus Ave. New York, NY 10019 </p>'
+				'content': '<h4>JSChannel COnference</h4><p><strong>Vivanta by Taj</strong><br>41/3,Mahatma Gandhi Road, Bangalore, Karnataka, 560 001</p>'
 			}, this);
 		});
 	});

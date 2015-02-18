@@ -1106,6 +1106,16 @@ a.rss:hover {
     width: 100%;
     height: 400px;
 }
+.address {
+  position: absolute;
+  left: 80px;
+  background: rgba(0,0,0,.8);
+  color: #fff;
+  z-index: 1000;
+  padding: 20px;
+  width: 200px;
+  font-size: 116%;
+}
 .carousel-wrap li {
     list-style: none outside none;
 }
