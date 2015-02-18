@@ -272,7 +272,7 @@ $(document).ready(function () {
 			'icon': image
 		}).click(function () {
 			$('#map_canvas').gmap('openInfoWindow', {
-				'content': '<h4>JSChannel COnference</h4><p><strong>Vivanta by Taj</strong><br>41/3,Mahatma Gandhi Road, Bangalore, Karnataka, 560 001</p>'
+				'content': '<h4>JSChannel Conference</h4><p><strong>Vivanta by Taj</strong><br>41/3,Mahatma Gandhi Road, Bangalore, Karnataka, 560 001</p>'
 			}, this);
 		});
 	});
