@@ -754,6 +754,9 @@ a.icon-wrap.small {
 .social a.icon-wrap:hover i {
     color: #fff;
 }
+a.github:hover {
+  background: gray;
+}
 a.email:hover {
     background: gray;
 }
@@ -2068,6 +2071,10 @@ a.coming-soon:hover:before {
 
 .fa-2 {
   font-size: 4em !important;
+}
+
+.fa-3 {
+  font-size: 3em !important;
 }
 
 .more-photos {
