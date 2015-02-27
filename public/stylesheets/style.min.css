@@ -369,6 +369,10 @@ select:focus:invalid:focus {
     color: #fff !important;
     background: #5e95af !important;
 }
+
+.current {
+    margin-top: -30px;
+}
 .top-bar.alt {
     -webkit-box-shadow: 0 3px 0 rgba(30, 38, 44, .2);
     -moz-box-shadow: 0 3px 0 rgba(30, 38, 44, .2);
@@ -416,7 +420,6 @@ nav select {
     background-size: cover;
     color: white;
     min-height: 300px;
-    height: 660px;
     margin: 0 auto;
     padding: 0;
 }
@@ -806,7 +809,7 @@ a.rss:hover {
     background: #f29a1d;
 }
 .jumbotron {
-    padding-top: 200px;
+    padding-top: 140px;
     height: 400px;
 }
 .jumbotron > div.span12 {
@@ -1907,7 +1910,7 @@ a.rss:hover {
     }
     .jumbotron {
         height: 365px !important;
-        padding-top: 120px !important;
+        padding-top: 70px !important;
     }
     .jumbotron h1 {
         margin: 10px 0;
@@ -2012,7 +2015,6 @@ a.coming-soon:hover:before {
   letter-spacing: 2px;
   line-height: 30px;
   text-transform: uppercase;
-  margin-top: 40px;
 }
 
 .embeded-video {
@@ -2093,4 +2095,10 @@ a.coming-soon:hover:before {
 .list-inline li {
   display: inline;
   padding-right: 4px;
+}
+
+@media screen (max-width: 350px) {
+    .top-bar:first-child {
+        margin-top: -20px;
+    }
 }
