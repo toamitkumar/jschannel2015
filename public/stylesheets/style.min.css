@@ -369,10 +369,6 @@ select:focus:invalid:focus {
     color: #fff !important;
     background: #5e95af !important;
 }
-
-.current {
-    margin-top: -30px;
-}
 .top-bar.alt {
     -webkit-box-shadow: 0 3px 0 rgba(30, 38, 44, .2);
     -moz-box-shadow: 0 3px 0 rgba(30, 38, 44, .2);
