@@ -1058,6 +1058,9 @@ a.rss:hover {
     -khtml-opacity: .5;
     opacity: .5;
 }
+.sponsor-me {
+  margin-top: 30px;
+}
 .news-items {
     margin: 0;
 }
