@@ -370,9 +370,9 @@ select:focus:invalid:focus {
     background: #5e95af !important;
 }
 
-.current {
+/*.current {
     margin-top: -30px;
-}
+}*/
 .top-bar.alt {
     -webkit-box-shadow: 0 3px 0 rgba(30, 38, 44, .2);
     -moz-box-shadow: 0 3px 0 rgba(30, 38, 44, .2);
@@ -809,7 +809,7 @@ a.rss:hover {
     background: #f29a1d;
 }
 .jumbotron {
-    padding-top: 140px;
+    padding-top: 200px;
     height: 400px;
 }
 .jumbotron > div.span12 {
@@ -860,13 +860,14 @@ a.rss:hover {
     padding: 0 5px;
 }
 .jumbotron a.btn {
-    display: block;
+    //display: block;
     font-weight: bold;
     letter-spacing: 2px;
     line-height: 30px;
     margin: 20px auto 0;
     text-transform: uppercase;
-    width: 170px;
+    width: 210px;
+    margin-left: 5px;
 }
 .price-table {
     margin: 0;
@@ -1900,7 +1901,10 @@ a.rss:hover {
 }
 @media only screen and (max-width: 459px) {
     .jumbotron h2 {
-      font-size: 50px;
+      font-size: 35px;
+    }
+    .sponsor-us {
+      display: none;
     }
     .navbar .btn-navbar {
         margin: 18px 0 0 !important;
@@ -1910,7 +1914,7 @@ a.rss:hover {
     }
     .jumbotron {
         height: 365px !important;
-        padding-top: 70px !important;
+        padding-top: 120px !important;
     }
     .jumbotron h1 {
         margin: 10px 0;
@@ -2015,6 +2019,7 @@ a.coming-soon:hover:before {
   letter-spacing: 2px;
   line-height: 30px;
   text-transform: uppercase;
+  margin-top: 40px;
 }
 
 .embeded-video {
