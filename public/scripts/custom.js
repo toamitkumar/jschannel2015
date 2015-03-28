@@ -239,6 +239,7 @@ $(document).ready(function () {
 		'mapTypeControl': false,
 		'navigationControl': false,
 		'streetViewControl': false,
+		'scrollwheel': false,
 		'styles': [{
 			stylers: [{
 				gamma: 0.60
