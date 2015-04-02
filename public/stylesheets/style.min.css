@@ -1979,6 +1979,9 @@ a.coming-soon:hover span {
 a.coming-soon:hover:before {
   content: "Coming Soon!"
 }
+a.coming-soon:hover:after {
+  content: ""
+}
 
 .team-member {
   text-align: center;
