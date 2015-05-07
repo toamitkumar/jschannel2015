@@ -134,7 +134,7 @@ $(document).ready(function () {
 	$('#countdown_timer').countdown({
 		// new Date(year, mth - 1 (april = 4 - 1 = 3), day, hr, min, sec) - date/time to count down to 
 		// or numeric for seconds offset, or string for unit offset(s): 
-		until: new Date(2015, 8, 17), 
+		until: new Date(2015, 6, 17), 
 		timezone: 1,
 		layout: 
 			'<ul id="counter_first">' +
