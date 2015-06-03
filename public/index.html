@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="dns-prefetch" href="//maps.google.com">
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
   <meta charset="utf-8">
   <title>JSChannel Conference 2015</title>
   <meta name="description" content="JSChannel Conference brings together JavaScript Enthusiasts from across the world.This July (17-18th), join us for a 2-day conference in Bengaluru">
@@ -11,23 +15,142 @@
   <meta property="og:image" content="http://2015.jschannel.com/images/speakers/douglas.jpg"/>
   <meta property="og:image:secure_url" content="https://2015.jschannel.com/images/speakers/douglas.jpg" />
 
-  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
-  <link rel="stylesheet" href="stylesheets/bootstrap-responsive.min.css">
-  <link rel="stylesheet" href="stylesheets/style.min.css">
-  <link rel="stylesheet" href="stylesheets/fonts.css">
-  <link rel="stylesheet" href="stylesheets/fontello.css">
-  <link rel="stylesheet" href="stylesheets/jquery.countdown.css">
-  <link rel="stylesheet" href="stylesheets/flexslider.css">
-  <link rel="stylesheet" href="stylesheets/jquery.fancybox.css">
   <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
   <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
   <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
   <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
   <link rel="shortcut icon" href="images/favicon.png">
-
-  <link href="http://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <style type="text/css">
+    /* Critical CSS */
+  	html { font-size: 100%; }
+  	body { margin: 0px; font-family: 'Open Sans', Helvetica, Arial, sans-serif; font-size: 15px; line-height: 24px; color: rgb(57, 62, 70) !important; background-color: rgb(255, 255, 255); }
+  	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+  	.top-bar { position: fixed; width: 100%; z-index: 999; box-shadow: none; height: 0px; background: rgb(255, 255, 255); }
+  	.top-bar, .top-bar * { transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+  	.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container { width: 940px; }
+  	.container { margin-right: auto; margin-left: auto; }
+  	.row { margin-left: -20px; }
+  	[class*="span"] { float: left; min-height: 1px; margin-left: 20px; }
+  	.span12 { width: 940px; }
+  	a { color: rgb(72, 163, 166); text-decoration: none; transition: 0.25s; -webkit-transition: 0.25s; -webkit-backface-visibility: hidden; outline: 0px; }
+  	.pull-left { float: left; }
+  	.top-bar .logo { position: relative; top: 60px; }
+  	.top-bar .logo span { display: inline-block; height: 40px; padding: 0px; text-transform: uppercase; width: 220px; transition: all 0.001s ease-in-out 0s; -webkit-transition: all 0.001s ease-in-out 0s; background: url(http://localhost:3000/images/logo.png) 0px 0px no-repeat scroll rgba(0, 0, 0, 0); color: rgb(255, 255, 255); font-size: 26px; font-weight: 700; line-height: 20px; }
+  	.navbar { margin-bottom: 20px; overflow: visible; font-size: 15px; font-weight: 700; }
+  	.pull-right { float: right; }
+  	button, input, select, textarea { margin: 0px; font-size: 100%; vertical-align: middle; }
+  	button, input { line-height: normal; }
+  	button, html input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
+  	label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] { cursor: pointer; }
+  	label, input, button, select, textarea { font-size: 14px; font-weight: normal; line-height: 20px; }
+  	input, button, select, textarea { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+  	.btn { display: inline-block; padding: 7px 12px; margin-bottom: 0px; font-size: 16.5px; line-height: 20px; color: white; text-align: center; text-shadow: none; vertical-align: middle; cursor: pointer; border-width: 1px; border-style: solid; border-color: rgba(0, 0, 0, 0.0980392) rgba(0, 0, 0, 0.0980392) rgb(179, 179, 179); border-radius: 8px; -webkit-box-shadow: none; box-shadow: none; background-image: linear-gradient(rgb(255, 255, 255), rgb(230, 230, 230)); background-color: rgb(245, 245, 245); background-repeat: repeat-x; border: none; text-decoration: none; transition: 0.25s; -webkit-transition: 0.25s; -webkit-backface-visibility: hidden; outline: 0px; background: rgb(72, 163, 166); }
+  	.navbar .btn, .navbar .btn-group { margin-top: 5px; }
+  	.navbar .btn-navbar { display: none; float: right; padding: 7px 10px; margin-right: 5px; margin-left: 5px; color: rgb(255, 255, 255); text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px; border-color: rgba(0, 0, 0, 0); -webkit-box-shadow: rgba(255, 255, 255, 0.0980392) 0px 1px 0px inset, rgba(255, 255, 255, 0.0745098) 0px 1px 0px; box-shadow: none; background-image: linear-gradient(rgb(242, 242, 242), rgb(229, 229, 229)); background-color: rgb(237, 237, 237); background-repeat: repeat-x; margin: 60px 0px 0px !important; background: none 0px 0px repeat scroll rgba(0, 0, 0, 0.2); }
+  	[class^="icon-"], [class*=" icon-"] { display: inline-block; width: 14px; height: 14px; margin-top: 1px; line-height: 14px; vertical-align: text-top; background-image: url(http://localhost:3000/release/images/glyphicons-halflings.png); background-position: 14px 14px; background-repeat: no-repeat; }
+  	.navbar .btn-navbar .icon-bar { display: block; width: 18px; height: 2px; border-radius: 1px; -webkit-box-shadow: rgba(0, 0, 0, 0.247059) 0px 1px 0px; box-shadow: 0px 0px 0px; background-color: rgb(255, 255, 255); }
+  	.btn-navbar .icon-bar + .icon-bar { margin-top: 3px; }
+  	.hidden { display: none; visibility: hidden; }
+  	.top-bar nav { -webkit-box-shadow: none; box-shadow: none; visibility: visible; display: block; width: auto; float: right; position: relative; top: 60px; background: transparent; }
+  	.collapse { position: relative; height: 0px; overflow: hidden; transition: height 0.35s ease; -webkit-transition: height 0.35s ease; }
+  	.nav-collapse.collapse { height: auto; overflow: visible; }
+  	ul, ol { padding: 0px; margin: 0px 0px 10px 25px; }
+  	ul { list-style-type: none; }
+  	.nav { margin-bottom: 20px; margin-left: 0px; list-style: none; }
+  	.navbar .nav { position: relative; left: 0px; display: block; float: left; margin: 0px 10px 0px 0px; }
+  	.top-bar .navbar .nav { margin: 0px; }
+  	li { line-height: 20px; }
+  	.navbar .nav > li { float: left; }
+  	.navbar .nav li { margin-left: 3px; position: relative; }
+  	.nav > li > a { display: block; }
+  	.navbar .nav > li > a { float: none; padding: 10px 15px; color: rgb(119, 119, 119); text-decoration: none; text-shadow: rgb(255, 255, 255) 0px 1px 0px; }
+  	.top-bar .navbar .nav > li > a { border-radius: 5px; color: rgb(255, 255, 255); padding: 10px 9px; text-decoration: none; text-transform: uppercase; text-shadow: none; background: rgba(0, 0, 0, 0.2); }
+  	#intro { -webkit-background-size: cover; color: white; min-height: 300px; margin: 0px auto; padding: 0px; background: url(http://localhost:3000/images/backgrounds/intro.jpg) 50% 50% / cover no-repeat fixed; }
+  	.flexslider { padding: 0px; margin: 0px auto -11px; position: relative; zoom: 1; max-width: 1440px; }
+  	.flex-viewport { max-height: 2000px; transition: all 1s ease; -webkit-transition: all 1s ease; }
+  	.flex-control-nav, .flex-direction-nav, .slides { margin: 0px; padding: 0px; list-style: none; }
+  	.flexslider .slides { zoom: 1; }
+  	.flexslider .slides > li { display: none; -webkit-backface-visibility: hidden; }
+  	.jumbotron { padding-top: 200px; height: 400px; }
+  	.text-center { text-align: center; }
+  	.jumbotron > div.span12 { display: inline-block; width: 100%; }
+  	h1, h2, h3, h4, h5, h6 { margin: 10px 0px; font-family: inherit; font-weight: bold; line-height: 20px; color: inherit; text-rendering: optimizeLegibility; }
+  	h1, h2, h3 { line-height: 40px; }
+  	h2 { font-size: 31.5px; }
+  	h1, h2 { color: inherit; font-family: 'Roboto Slab Bold'; font-weight: bold; line-height: 40px; margin: 5px 0px 20px; text-rendering: optimizeLegibility; }
+  	.jumbotron h2 { font-size: 60px; line-height: 1; text-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px; }
+  	h3 { font-size: 24.5px; }
+  	.jumbotron h3 { font-size: 48px; font-weight: 400; line-height: 1.1; text-shadow: rgba(0, 0, 0, 0.298039) 0px 0px 8px; }
+  	.jumbotron .info { margin: 30px auto 0px; box-sizing: border-box; font-size: 30px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; background: transparent; }
+  	.jumbotron .days, .jumbotron .month, .jumbotron .year, .jumbotron .location { display: inline-block; padding: 0px 5px; }
+  	.span3 { width: 220px; }
+  	.span6 { width: 460px; }
+  	#countdown_inner { width: 700px; margin: 0px auto; }
+  	ul ul, ul ol, ol ol, ol ul { margin-bottom: 0px; }
+  	#countdown_timer ul { position: absolute; margin: 0px; padding: 0px; text-align: center; }
+  	#countdown_timer li { position: absolute; top: 22px; width: 156px; height: 156px; color: rgb(51, 51, 51); font-size: 9px; text-align: center; text-transform: uppercase; background: url(http://localhost:3000/images/counter.png) no-repeat; }
+  	#countdown_timer li.days { left: -8px; }
+  	#countdown_timer li.hours { left: 178px; }
+  	#countdown_timer li.minutes { left: 358px; }
+  	#countdown_timer li.seconds { left: 538px; }
+  	#countdown_clock { position: relative; z-index: 2; width: 100%; margin: 0px 0px 0px -1px; padding: 0px; }
+  	audio, canvas, video { display: inline-block; }
+  	#circular_countdown_days, #circular_countdown_hours, #circular_countdown_minutes, #circular_countdown_seconds { position: relative; z-index: 1; padding: 0px; width: 160px; }
+  	#circular_countdown_days { margin: 0px 37px 0px 30px; }
+  	#circular_countdown_hours, #circular_countdown_minutes { margin: 0px 37px 0px 0px; }
+  	.flex-direction-nav a, .no-js .slides > li:first-child, .slides::after, html[xmlns] .slides { display: block; }
+  	.flex-direction-nav a { width: 31px; height: 31px; margin: 0px; border-radius: 50%; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; opacity: 0.5; transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; }
+  	.flex-direction-nav .flex-prev { left: 0px; background: url(http://localhost:3000/images/carousel_prev.png) 100% 100% no-repeat rgb(255, 255, 255); }
+  	.flex-direction-nav .flex-next { right: 0px; background: url(http://localhost:3000/images/carousel_next.png) 0% 100% no-repeat rgb(255, 255, 255); }
+  	.item > .social { display: none; padding-bottom: 10px; }
+  	.icon-wrap { border-radius: 50%; box-sizing: border-box; display: inline-block; margin: 0px auto; overflow: visible; padding: 0px; text-align: center; width: 40px; height: 40px; background: none 0px 0px repeat scroll rgb(255, 255, 255); }
+  	a.icon-wrap { color: rgb(255, 255, 255); transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; margin-bottom: 5px; }
+  	.icon-wrap.small { height: 40px; margin: 0px 3px 5px; width: 40px; }
+  	a.icon-wrap.small { height: 40px; margin: 0px 3px 5px; width: 40px; }
+  	.fa-3 { font-size: 3em !important; }
+  	.icon-wrap i { display: block; line-height: 40px; text-align: center; vertical-align: middle; }
+  	.icon-wrap.small i { color: rgb(255, 255, 255); display: inline-block; font-size: 18px; margin: 0px auto; text-align: center; vertical-align: middle; }
+  	.social a.icon-wrap i { color: rgb(133, 149, 158); transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; }
+  	p { margin: 0px 0px 10px; }
+  	.fade { opacity: 0; transition: opacity 0.15s linear; -webkit-transition: opacity 0.15s linear; }
+  	.tab-content > .tab-pane, .pill-content > .pill-pane { display: none; }
+  	.span4 { width: 300px; }
+  	.span8 { width: 620px; }
+  	.timeline { position: relative; padding: 0px; font-family: 'Open Sans', Arial, sans-serif; margin: 0px; }
+  	.event { position: relative; margin-bottom: 0px; padding-bottom: 30px; }
+  	.timeline-icon { margin-left: 93px; margin-top: 15px; box-sizing: border-box; border-radius: 50%; float: left; height: 40px; padding: 4px; position: relative; width: 40px; z-index: 10; transition: all 0.4s ease-in-out; -webkit-transition: all 0.4s ease-in-out; background: none 0px 0px repeat scroll rgba(72, 163, 166, 0.4); }
+  	.timeline-icon-container { border-radius: 50%; display: inline-block; height: 30px; line-height: 25px; margin-left: 1px; margin-top: -1px; vertical-align: text-top; width: 30px; background: rgb(239, 114, 71); }
+  	.timeline-icon-container i { color: rgb(255, 255, 255); font-size: 19px; line-height: 28px; padding-left: 2px; }
+  	.time-box { position: absolute; top: 23px; z-index: 1; }
+  	.time-box time { color: rgba(0, 0, 0, 0.34902); font-size: 20px; font-weight: 600; padding: 0px 0px 0px 15px; text-align: left; text-transform: uppercase; width: 100%; }
+  	.timeline-content { margin-left: 160px; margin-top: 0px; padding-top: 0px; perspective: 600px; position: relative; }
+  	.event-content { box-sizing: border-box; border: medium none; border-radius: 10px; padding: 1px 16px; width: 100%; background: none 0px 0px repeat scroll rgb(255, 255, 255); }
+  	.toggle-item-title { cursor: pointer; padding: 0px 32px 0px 0px; background: url(http://localhost:3000/images/icons/toggle.png) 100% 5px no-repeat scroll transparent; }
+  	.event-title h3 { font-size: 22px; line-height: 40px; text-transform: uppercase; }
+  	h4 { font-size: 17.5px; }
+  	.event-title h3 span { color: rgb(153, 153, 153); font-weight: 400; text-transform: none; }
+  	.event-title h4 span { color: rgb(153, 153, 153); font-weight: 400; }
+  	.event:last-child { padding-bottom: 0px; }
+  	.gm-style .gm-style-cc span, .gm-style .gm-style-cc a, .gm-style .gm-style-mtc div { font-size: 10px; }
+  	img { height: auto; max-width: 100%; vertical-align: middle; border: 0px; }
+  	.gm-style img { max-width: none; }
+  	#map_canvas img, .google-maps img { max-width: none; }
+  	.gm-style .gmnoscreen, .gmnoscreen { display: none; }
+  	.modal { position: fixed; top: 10%; left: 50%; z-index: 1050; width: 560px; margin-left: -280px; border: 1px solid rgba(0, 0, 0, 0.298039); border-radius: 8px 8px 11px 11px; outline: 0px; -webkit-box-shadow: rgba(0, 0, 0, 0.298039) 0px 3px 7px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 3px 7px; -webkit-background-clip: padding-box; background-color: rgb(255, 255, 255); background-clip: padding-box; }
+  	.hide { display: none; }
+  	.modal.fade { top: -25%; transition: opacity 0.3s linear, top 0.3s ease-out; -webkit-transition: opacity 0.3s linear, top 0.3s ease-out; }
+  	.modal-header { padding: 9px 15px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+  	.close { float: right; font-size: 20px; font-weight: bold; line-height: 20px; color: rgb(0, 0, 0); text-shadow: rgb(255, 255, 255) 0px 1px 0px; opacity: 0.2; }
+  	button.close { padding: 0px; cursor: pointer; border: 0px; -webkit-appearance: none; background: transparent; }
+  	.modal-header .close { margin-top: 2px; }
+  	.modal-header h3 { margin: 0px; line-height: 30px; }
+  	.modal-body { position: relative; max-height: 400px; padding: 15px; overflow-y: auto; }
+  	.code-conduct { padding: 10px; margin: 15px 0px; border-width: 1px 1px 1px 5px; border-style: solid; border-color: rgb(238, 238, 238); border-radius: 3px; }
+  	.code-conduct-info { border-left-color: rgb(70, 136, 71); }
+  	.code-conduct-info-longer { border-left-color: rgb(240, 173, 78); }
+  	.modal-footer { padding: 14px 15px 15px; margin-bottom: 0px; text-align: right; border-top-width: medium; border-top-style: none; border-top-color: rgb(221, 221, 221); border-radius: 0px 0px 8px 8px; -webkit-box-shadow: rgb(255, 255, 255) 0px 1px 0px inset; box-shadow: none; background-color: rgb(239, 239, 239); }
+  </style>
 </head>
 
 <body>
@@ -36,28 +159,28 @@
       <div class="row">
         <div class="span12 current"><a class="logo pull-left" href="http://2015.jschannel.com/#intro" title="JSchannel Conference 2015"><span></span></a>
           <div class="navbar main-nav pull-right">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span> 
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>  <span class="icon-bar"></span>  <span class="icon-bar"></span>
             </button>
             <nav class="hidden">
               <div class="nav-collapse collapse">
                 <ul id="mainnav" class="nav">
-                  <li class=""> <a href="#about">About</a> 
+                  <li class=""> <a href="#about">About</a>
                   </li>
-                  <li class=""> <a href="#speakers">Speakers</a> 
+                  <li class=""> <a href="#speakers">Speakers</a>
                   </li>
-                  <li class=""><a href="#schedule">Schedule</a> 
+                  <li class=""><a href="#schedule">Schedule</a>
                   </li>
-                  <li class=""><a href="#gallery">Gallery</a> 
+                  <li class=""><a href="#gallery">Gallery</a>
                   </li>
-                  <li class=""><a href="#venue">Venue</a> 
+                  <li class=""><a href="#venue">Venue</a>
                   </li>
-                  <li class=""><a href="#sponsors">Sponsors</a> 
+                  <li class=""><a href="#sponsors">Sponsors</a>
                   </li>
-                  <li class=""><a href="#team">Team</a> 
+                  <li class=""><a href="#team">Team</a>
                   </li>
-<!--                   <li class=""><a href="#news">News</a> 
+<!--                   <li class=""><a href="#news">News</a>
                   </li> -->
-                  <li class=""><a href="#contact">Contact</a> 
+                  <li class=""><a href="#contact">Contact</a>
                   </li>
                 </ul>
               </div>
@@ -79,7 +202,7 @@
               </div>
               <div class="span3"></div>
               <div class="span6 text-center">
-                <a href="http://www.townscript.com/jschannel2015" class="btn btn-large" target="_blank"><span>Get tickets</span></a> 
+                <a href="http://www.townscript.com/jschannel2015" class="btn btn-large" target="_blank"><span>Get tickets</span></a>
                 <a href="https://docs.google.com/forms/d/1mRnvouoYXIhiMnpGz3Og1KYtuhovdQHUq9SRGonHq78/viewform" class="btn btn-large" target="_blank"><span>CFP Closed</span></a>
               </div>
               <div class="span3"></div>
@@ -89,11 +212,11 @@
             <div class="row jumbotron">
               <div class="span12 text-center">
                 <h2>Be Ready for a new beginning!</h2>
-                <div id="countdown_inner"><!-- Begin second countdown container -->            
+                <div id="countdown_inner"><!-- Begin second countdown container -->
                   <div id="countdown_timer" class="hasCountdown"></div><!-- Countdown values -->
                   <div id="countdown_clock">
                                   <!-- <canvas width="900" height="180"></canvas><!-- Countdown circular shapes -->
-            
+
                     <canvas id="circular_countdown_days" width="160" height="160"></canvas>
                     <canvas id="circular_countdown_hours" width="160" height="160"></canvas>
                     <canvas id="circular_countdown_minutes" width="160" height="160"></canvas>
@@ -125,7 +248,7 @@
       <div class="row sponsor-us">
         <div class="span4 text-center"></div>
         <div class="span4 text-center">
-          <a href="doc/JSChannel_Sponsorship_2015.pdf" target="_blank" class="btn btn-large btn-block"><span>Want to Sponsor?</span></a> 
+          <a href="doc/JSChannel_Sponsorship_2015.pdf" target="_blank" class="btn btn-large btn-block"><span>Want to Sponsor?</span></a>
         </div>
         <div class="span4 text-center"></div>
       </div>
@@ -148,19 +271,19 @@
                   <div class="divider-space"></div>
               </div>
               <div class="span4 text-center">
-                  <div class="icon-wrap large color1"><i class="iconf-microphone"></i> 
+                  <div class="icon-wrap large color1"><i class="iconf-microphone"></i>
                   </div>
                   <h3>Talks</h3>
                   <p>Opportunity to hear from Ember.JS core team member and a retired RubyOnRails and jQuery Core team member - Yehuda Katz. Hear from the best of the bests in JS pan-India.</p>
               </div>
               <div class="span4 text-center">
-                  <div class="icon-wrap large color3"><i class="iconf-beaker"></i> 
+                  <div class="icon-wrap large color3"><i class="iconf-beaker"></i>
                   </div>
                   <h3>Workshops</h3>
                   <p>Have inquisitive of the cutting edge technology? Want an enriching experience while learning them? Join us for an opportunity to learn from professional JS trainers and experience live-coding sessions.</p>
               </div>
               <div class="span4 text-center">
-                  <div class="icon-wrap large color2"><i class="iconf-food"></i> 
+                  <div class="icon-wrap large color2"><i class="iconf-food"></i>
                   </div>
                   <h3>Fabulous Food</h3>
                   <p>Enjoy the rich Indian cuisine prepared by one of the known restaurant in Bengaluru.</p>
@@ -197,7 +320,7 @@
               <li>
                 <div class="item">
                   <div class="photo-wrap">
-                    <img src="images/speakers/douglas.jpg" alt=" ">
+                    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/speakers/douglas.jpg" alt=" ">
                   </div>
                   <div class="text-wrap white">
                     <h3>Douglas Crockford</h3>
@@ -206,9 +329,9 @@
                     <p class="description">Douglas Crockford has worked in learning systems, small business systems, office automation, games, interactive music, multimedia, location-based entertainment, social systems, and programming languages. He is the inventor of Tilton, the ugliest programming language that was not specifically designed to be an ugly programming language. He is best known for having discovered that there are good parts in JavaScript. He also discovered the JSON Data Interchange Format, the world's most loved data format.</p>
                   </div>
                   <div class="social">
-                    <a href="https://github.com/douglascrockford" target="_blank" title="GitHub" class="icon-wrap small github"> <i class="fa fa-github fa-3"></i> 
+                    <a href="https://github.com/douglascrockford" target="_blank" title="GitHub" class="icon-wrap small github"> <i class="fa fa-github fa-3"></i>
                     </a>
-                    <a href="https://plus.google.com/+DouglasCrockfordEsq" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i> 
+                    <a href="https://plus.google.com/+DouglasCrockfordEsq" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i>
                     </a>
                   </div>
                 </div>
@@ -216,7 +339,7 @@
               <li>
                 <div class="item">
                   <div class="photo-wrap hover_colour">
-                    <img src="images/speakers/yehuda.jpeg" alt=" ">
+                    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/speakers/yehuda.jpeg" alt=" ">
                   </div>
                   <div class="text-wrap white">
                     <h3>Yehuda Katz</h3>
@@ -225,13 +348,13 @@
                     <p class="description">Yehuda Katz is a member of the  Ember.js and Rust Core Teams, and a retired Ruby on Rails and jQuery Core Team member. His 9-to-5 home is at the startup he founded, Tilde Inc.. There he works on Skylight, the smart profiler for Rails, and does Ember.js consulting. He's best known for his open source work, which also includes projects like Thor, Handlebars and Bundler.</p>
                   </div>
                   <div class="social">
-                    <a href="https://www.facebook.com/wycats" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i> 
+                    <a href="https://www.facebook.com/wycats" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i>
                     </a>
-                    <a href="https://twitter.com/wycats" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i> 
+                    <a href="https://twitter.com/wycats" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i>
                     </a>
-                    <a href="https://plus.google.com/+YehudaKatz" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i> 
+                    <a href="https://plus.google.com/+YehudaKatz" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/yehudakatz" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i> 
+                    <a href="https://www.linkedin.com/in/yehudakatz" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i>
                     </a>
                   </div>
                 </div>
@@ -239,7 +362,7 @@
               <li>
                 <div class="item">
                   <div class="photo-wrap hover_colour">
-                    <img src="images/speakers/joep.jpeg" alt=" ">
+                    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/speakers/joep.jpeg" alt=" ">
                   </div>
                   <div class="text-wrap white">
                     <h3>Joe Pettersson</h3>
@@ -248,13 +371,13 @@
                     <p class="description">Joe's UI Engineering Lead at McKinsey & Company, specifially at McKinsey Digital Labs. He's passionate about user-interfaces, user-experiences and building kick-ass tools and products. He's been writing JavaScript since the late 1990's, and has a passion for talking about it publically. He's half Swedish and half English, which means that while he loves herring, snow and flat-pack furniture; he also never performs adequatley at international football tournaments.</p>
                   </div>
                   <div class="social">
-                    <a href="https://www.facebook.com/Joe8Bit" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i> 
+                    <a href="https://www.facebook.com/Joe8Bit" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i>
                     </a>
-                    <a href="https://twitter.com/Joe8Bit" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i> 
+                    <a href="https://twitter.com/Joe8Bit" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i>
                     </a>
-                    <a href="https://plus.google.com/109375864564986684915" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i> 
+                    <a href="https://plus.google.com/109375864564986684915" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i>
                     </a>
-                    <a href="http://in.linkedin.com/in/joepettersson" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i> 
+                    <a href="http://in.linkedin.com/in/joepettersson" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i>
                     </a>
                   </div>
                 </div>
@@ -262,7 +385,7 @@
               <li>
                 <div class="item">
                   <div class="photo-wrap">
-                    <img src="images/speakers/christian.jpg" alt=" ">
+                    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/speakers/christian.jpg" alt=" ">
                   </div>
                   <div class="text-wrap white">
                     <h3>Christian Lilley</h3>
@@ -271,13 +394,13 @@
                     <p class="description">Christian Lilley turns theoretical business-y stuff into blinky-lights that actually do useful things. He digs rapid-prototyping with AngularJS, speaks often at conferences like ng-conf and CSSConf Asia, and co-founded the Meetup 'Data Visualization NY'. Now he lives in KL, wishing there was a GeoViz that could help him find the best hawker stalls.</p>
                   </div>
                   <div class="social">
-                    <a href="https://www.facebook.com/christian.lilley" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i> 
+                    <a href="https://www.facebook.com/christian.lilley" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i>
                     </a>
-                    <a href="https://twitter.com/xmlilley" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i> 
+                    <a href="https://twitter.com/xmlilley" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i>
                     </a>
-                    <a href="https://plus.google.com/+ChristianLilley" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i> 
+                    <a href="https://plus.google.com/+ChristianLilley" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i>
                     </a>
-                    <a href="https://my.linkedin.com/in/christianlilley" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i> 
+                    <a href="https://my.linkedin.com/in/christianlilley" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i>
                     </a>
                   </div>
                 </div>
@@ -285,7 +408,7 @@
               <li>
                 <div class="item">
                   <div class="photo-wrap">
-                    <img src="images/speakers/you.jpg" alt=" ">
+                    <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/speakers/you.jpg" alt=" ">
                   </div>
                   <div class="text-wrap white">
                     <h3>You?</h3>
@@ -294,13 +417,13 @@
                     <p class="description">Passionate about Frontend.</p>
                   </div>
                   <div class="social">
-                    <a href="#" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i> 
+                    <a href="#" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i>
                     </a>
-                    <a href="#" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i> 
+                    <a href="#" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i>
                     </a>
-                    <a href="#" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i> 
+                    <a href="#" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i>
                     </a>
-                    <a href="#" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i> 
+                    <a href="#" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i>
                     </a>
                   </div>
                 </div>
@@ -336,7 +459,7 @@
         </div>
         <div class="span12">
           <ul id="schedule-tabs" class="nav nav-pills tab-fillspace ">
-            <li class="active"><a href="#dayone" data-toggle="tab"> July 17<sup>rd</sup></a></li> 
+            <li class="active"><a href="#dayone" data-toggle="tab"> July 17<sup>rd</sup></a></li>
             <li class=""><a href="#daytwo" data-toggle="tab"> July 18<sup>th</sup></a> </li>
           </ul>
         </div>
@@ -398,7 +521,7 @@
                         <h3>Opening Keynote</h3>
                         <h4>Douglas Crockford</h4>
                         <p> <b>Topic : Upgrading the Web</b>
-                        
+
                       </div>
                       <div class="toggle-item-body" style="display: none;">
                         <p>
@@ -527,7 +650,7 @@
                 </article>
                 <article class="event">
                   <div class="timeline-icon">
-                    <div class="timeline-icon-container"><i class="iconf-sun"></i> 
+                    <div class="timeline-icon-container"><i class="iconf-sun"></i>
                     </div>
                   </div>
                   <div class="time-box">
@@ -551,7 +674,7 @@
             <div class="span4">
               <h2>Second Day</h2>
               <p>We kick-off the day with keynote by Yehuda Katz. The structure of the day remains the same, except you get one hour with the speaker panel. You can ask anything/everything related to JavaScript. Don't loose this opportunity to learn from the likes of Doug, Yehuda, Joe and Christian</p>
-              <!-- <div class="schedule-download"><a href="#" class="btn coming-soon"><i class="iconf-acrobat"></i><p>Full Schedule</p></a>  
+              <!-- <div class="schedule-download"><a href="#" class="btn coming-soon"><i class="iconf-acrobat"></i><p>Full Schedule</p></a>
               </div> -->
             </div>
             <div class="span8">
@@ -643,7 +766,7 @@
                         <h4>Learn When & How to Leverage the Power of Virtual DOM & Reactive Data Flows <span>Live-coding/Workshop session by Christian Lilley</span></h4>
                       </div>
                       <div class="toggle-item-body" style="display: none;">
-                        <p>Whatever other tools you use and love, one thing about ReactJS is certain: the 'Virtual DOM' approach is the future of the web. It's just too fast and too sensible to ignore. In this session, we'll learn: 
+                        <p>Whatever other tools you use and love, one thing about ReactJS is certain: the 'Virtual DOM' approach is the future of the web. It's just too fast and too sensible to ignore. In this session, we'll learn:
                         <ul>
                           <li>What 'Virtual DOM' is and why it matters</li>
                           <li>How you can begin making use of it now, in your existing environments</li>
@@ -712,7 +835,7 @@
                 </article>
                 <article class="event">
                   <div class="timeline-icon">
-                    <div class="timeline-icon-container"><i class="iconf-microphone"></i> 
+                    <div class="timeline-icon-container"><i class="iconf-microphone"></i>
                     </div>
                   </div>
                   <div class="time-box">
@@ -747,31 +870,31 @@
         <div class="span12">
           <ul class="event-items">
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/01.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/01.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/02.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/02.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/03.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/03.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/04.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/04.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/05.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/05.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/06.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/06.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/07.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/07.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/08.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/08.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
-              <img src="images/gallery/09.jpg"/>
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/gallery/09.jpg"/>
             </li>
             <li class="event-item clearfix span2 text-center">
               <div class="more-photos">
@@ -829,7 +952,7 @@
         <div class="span12 hero-unit text-center">
           <div class="span3 text-center" style="background-color: white;">
             <a href="javascript:void(0);">
-              <img src="images/sponsors/xebia_silver.png" class="sponsor-logo" alt="">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/sponsors/xebia_silver.png" class="sponsor-logo" alt="">
             </a>
           </div>
         </div>
@@ -839,7 +962,7 @@
         <div class="span12 hero-unit text-center">
           <div class="span3 text-center" style="background-color: white;">
             <a href="https://www.mozilla.org">
-              <img src="images/sponsors/mozilla_bronze.png" class="sponsor-logo" alt="">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/sponsors/mozilla_bronze.png" class="sponsor-logo" alt="">
             </a>
           </div>
         </div>
@@ -865,29 +988,29 @@
         </div>
         <div class="span3 text-center">
           <a href="https://www.github.com">
-            <img src="images/associations/1.png" class="sponsor-logo" alt="">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/associations/1.png" class="sponsor-logo" alt="">
           </a>
         </div>
         <div class="span3 text-center">
-          <a href="http://jsconf.com">              
+          <a href="http://jsconf.com">
             <span><h1 class="jsconf">JSConf<sup>TM</sup></h1></span>
           </a>
         </div>
         <div class="span3 text-center">
-          <a href="http://communityjs.org">              
+          <a href="http://communityjs.org">
             <span><h1>CommunityJS.org</h1></span>
           </a>
         </div>
         <div class="span3 text-center">
           <a href="http://bangalorejs.org">
-            <img src="images/associations/4.png" class="sponsor-logo bangalorejs" alt="">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/associations/4.png" class="sponsor-logo bangalorejs" alt="">
           </a>
         </div>
       </div>
       <div class="row">
         <div class="span3 text-center">
           <a href="http://www.townscript.com" alt="Ticketing Partner">
-            <img src="images/associations/5.png" class="sponsor-logo" alt="Ticketing Partner">
+            <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/associations/5.png" class="sponsor-logo" alt="Ticketing Partner">
           </a>
         </div>
       </div>
@@ -905,7 +1028,7 @@
           <div class="span3 text-center">
             <div class="team-member">
               <a href="https://twitter.com/toamit" target="_blank">
-                <img src="images/members/1.jpg" class="img-responsive img-circle" alt="">
+                <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/members/1.jpg" class="img-responsive img-circle" alt="">
               </a>
               <h4>Amit Kumar</h4>
               <p class="text-muted">Digital Expert</p>
@@ -920,7 +1043,7 @@
           <div class="span3 text-center">
             <div class="team-member">
               <a href="https://twitter.com/iamitanand" target="_blank">
-                <img src="images/members/2.jpg" class="img-responsive img-circle" alt="">
+                <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/members/2.jpg" class="img-responsive img-circle" alt="">
               </a>
               <h4>Amit Anand</h4>
               <p class="text-muted">Digital Engagement Manager</p>
@@ -935,7 +1058,7 @@
           <div class="span3 text-center">
             <div class="team-member">
               <a href="https://twitter.com/narunaram" target="_blank">
-                <img src="images/members/3.jpg" class="img-responsive img-circle" alt="">
+                <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/members/3.jpg" class="img-responsive img-circle" alt="">
               </a>
               <h4>Naresh Sharma</h4>
               <p class="text-muted">Digital Consultant</p>
@@ -950,7 +1073,7 @@
           <div class="span3 text-center">
             <div class="team-member">
               <a href="https://twitter.com/nirajkbhandari" target="_blank">
-                <img src="images/members/4.jpg" class="img-responsive img-circle" alt="">
+                <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/members/4.jpg" class="img-responsive img-circle" alt="">
               </a>
               <h4>Niraj Bhandari</h4>
               <p class="text-muted">Product Manager</p>
@@ -968,7 +1091,7 @@
         <div class="span3 text-center">
           <div class="team-member">
             <a href="https://twitter.com/sumankpaul" target="_blank">
-              <img src="images/members/5.jpg" class="img-responsive img-circle" alt="">
+              <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/members/5.jpg" class="img-responsive img-circle" alt="">
             </a>
             <h4>Suman Paul</h4>
             <p class="text-muted">Senior Digital Analyst</p>
@@ -983,7 +1106,7 @@
         <div class="span3 text-center">
             <div class="team-member">
               <a href="https://www.facebook.com/bhattacharyyapulak" target="_blank">
-                <img src="images/members/6.png" class="img-responsive img-circle" alt="">
+                <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="images/members/6.png" class="img-responsive img-circle" alt="">
               </a>
               <h4>Pulak Kanti Bhattacharyya</h4>
               <p class="text-muted">Project Lead</p>
@@ -1010,7 +1133,7 @@
           <p>Copyright &copy; JSChannel 2013-2015</p>
         </div>
         <div class="span4 text-center">
-          Queries: 
+          Queries:
           <ul>
             <li><i class="iconf-mobile"></i> +91 9619483353, +91 9663411944, +91 9741594633, +91 9945458300</li>
         </div>
@@ -1023,21 +1146,21 @@
         </div>
         <div class="span12 text-center">
           <div class="social">
-            <a href="mailto:info@jschannel.com?Subject=Hello JSChannel Team" target="_blank" title="Email" class="icon-wrap small email"><i class="iconf-email"></i> 
+            <a href="mailto:info@jschannel.com?Subject=Hello JSChannel Team" target="_blank" title="Email" class="icon-wrap small email"><i class="iconf-email"></i>
             </a>
-            <a href="https://www.facebook.com/javascriptchannel" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i> 
+            <a href="https://www.facebook.com/javascriptchannel" target="_blank" title="Facebook" class="icon-wrap small facebook"> <i class="iconf-facebook"></i>
             </a>
-            <a href="https://twitter.com/js_channel/" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i> 
+            <a href="https://twitter.com/js_channel/" target="_blank" title="Twitter" class="icon-wrap small twitter"> <i class="iconf-twitter"></i>
             </a>
-            <a href="https://plus.google.com/111069083279946389343/" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i> 
+            <a href="https://plus.google.com/111069083279946389343/" target="_blank" title="Google+" class="icon-wrap small google"> <i class="iconf-gplus"></i>
             </a>
-            <a href="http://www.linkedin.com/groups?home=&gid=5112841" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i> 
+            <a href="http://www.linkedin.com/groups?home=&gid=5112841" target="_blank" title="Linkedin" class="icon-wrap small linkedin"> <i class="iconf-linkedin"></i>
             </a>
-            <a href="https://www.flickr.com/photos/100543192@N08/sets/72157646036037789/" target="_blank" title="Flickr" class="icon-wrap small flickr"> <i class="iconf-flickr"></i> 
+            <a href="https://www.flickr.com/photos/100543192@N08/sets/72157646036037789/" target="_blank" title="Flickr" class="icon-wrap small flickr"> <i class="iconf-flickr"></i>
             </a>
-            <a href="http://lanyrd.com/2015/jschannelconf2015/" target="_blank" title="Lanyrd" class="icon-wrap small lanyrd"> <i class="iconf-lanyrd"></i> 
+            <a href="http://lanyrd.com/2015/jschannelconf2015/" target="_blank" title="Lanyrd" class="icon-wrap small lanyrd"> <i class="iconf-lanyrd"></i>
             </a>
-            <a href="https://www.youtube.com/channel/UCdf_Ezv2lcB9OKE_4N23w1A/videos" target="_blank" title="Youtube" class="icon-wrap small youtube"> <i class="iconf-youtube"></i> 
+            <a href="https://www.youtube.com/channel/UCdf_Ezv2lcB9OKE_4N23w1A/videos" target="_blank" title="Youtube" class="icon-wrap small youtube"> <i class="iconf-youtube"></i>
             </a>
           </div>
         </div>
@@ -1060,7 +1183,7 @@
         <h4>The Quick Version</h4>
         <p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, age, sexual orientation, disability, physical appearance, body size, race, or religion (or lack thereof). We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks, workshops, parties, Twitter and other online media. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organisers.</p>
       </div>
-              
+
       <div class="code-conduct code-conduct-info-longer">
         <h4>The Less Quick Version</h4>
         <p>Harassment includes offensive verbal comments related to gender, age, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. Participants asked to stop any harassing behavior are expected to comply immediately. Sponsors are also subject to the anti-harassment policy. In particular, sponsors should not use sexualised images, activities, or other material. Booth staff (including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment. If a participant engages in harassing behavior, the conference organisers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified as they'll be wearing branded t-shirts. Conference staff will be happy to help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.We expect participants to follow these rules at conference and workshop venues and conference-related social events.</p>
@@ -1080,41 +1203,47 @@
     </div>
     <div class="modal-footer"> <a data-dismiss="modal" class="btn">Close</a> </div>
   </div>
-
-  <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.plugin.js"></script>
-  <script src="http://code.jquery.com/mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript"></script>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-  <script type="text/javascript" src="scripts/jquery.ui.map.min.js"></script>
-  <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.flexslider-min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.carousel.js"></script>
-  <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.3.1-min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.parallax-1.1.3.js"></script>
-  <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.nav.js"></script>
-  <script type="text/javascript" src="scripts/jquery.jCanvas.js"></script>
-  <script type="text/javascript" src="scripts/jquery.countdown.min.js"></script>
-  <script type="text/javascript" src="scripts/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="scripts/jquery.fancybox-media.js"></script>
-  <script type="text/javascript" src="scripts/custom.js"></script>
+  <script type="text/javascript" async src="/release/js/production.min.js"></script>
+  <script type="text/javascript" async src="//cdn.jsdelivr.net/blazy/latest/blazy.min.js"></script>
   <!-- Google analytics here -->
   <!-- please remove this code if you are using a stolen version of this template -->
   <script>
-      (function(i, s, o, g, r, a, m) {
-          i['GoogleAnalyticsObject'] = r;
-          i[r] = i[r] || function() {
-              (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
-          a = s.createElement(o),
-          m = s.getElementsByTagName(o)[0];
-          a.async = 1;
-          a.src = g;
-          m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    window.onload = function() {
+	    new Blazy();
+    };
+    var CSSloader = {
+       add: function(elements, attr) {
+          var linkNode;
+          for(var index in elements) {
+            linkNode = document.createElement("link");
+            linkNode.setAttribute('rel', 'stylesheet');
+            linkNode.setAttribute('type', 'text/css');
+            linkNode.setAttribute('href', elements[index]);
+            document.head.appendChild(linkNode);
+          }
+       }
+    };
+    // fonts
+    CSSloader.add([
+      "/release/css/production.min.css",
+      "http://fonts.googleapis.com/css?family=Poiret+One",
+      "http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
+    ]);
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-42133353-1', 'auto');
-      ga('send', 'pageview');
+    ga('create', 'UA-42133353-1', 'auto');
+    ga('send', 'pageview');
   </script>
 </body>
 

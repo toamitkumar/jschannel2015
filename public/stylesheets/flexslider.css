@@ -50,8 +50,8 @@ html[xmlns] .slides {display: block;}
 /* Direction Nav */
 .flex-direction-nav {*height: 0;}
 .flex-direction-nav a {width: 31px; height: 31px; margin: 0; display: block; border-radius: 50%; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; opacity: 0.5; -webkit-transition: all 0.4s ease-in-out; -moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out;}
-.flex-direction-nav .flex-next {background: url("../images/carousel_next.png") no-repeat scroll left bottom rgba(255, 255, 255, 1); right: 0px; }
-.flex-direction-nav .flex-prev {background: url("../images/carousel_prev.png") no-repeat scroll right bottom rgba(255, 255, 255, 1); left: 0px;}
+.flex-direction-nav .flex-next {background: url("/images/carousel_next.png") no-repeat scroll left bottom rgba(255, 255, 255, 1); right: 0px; }
+.flex-direction-nav .flex-prev {background: url("/images/carousel_prev.png") no-repeat scroll right bottom rgba(255, 255, 255, 1); left: 0px;}
 .flexslider:hover .flex-next {opacity: 1;}
 .flexslider:hover .flex-prev {opacity: 1;}
 .flexslider:hover .flex-next:hover {background-color: rgba(255, 255, 255, 0.5); background-position:right bottom; opacity: 1;}
