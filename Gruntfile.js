@@ -63,7 +63,14 @@ module.exports = function( grunt ) {
     concat_css: {
       all: {
         src: [
-          'release/css/*.min.css',
+          'release/css/bootstrap.min.css',
+          'release/css/bootstrap-responsive.min.css',
+          'release/css/style.min.css',
+          'release/css/fonts.min.css',
+          'release/css/fontello.min.css',
+          'release/css/jquery-countdown.min.css',
+          'release/css/flexslider.min.css',
+          'release/css/jquery-fancybox.min.css'
         ],
         dest: "public/release/css/production.min.css"
       },
