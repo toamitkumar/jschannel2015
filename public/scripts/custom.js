@@ -2,7 +2,7 @@
 
 // Javascripts //
 $(document).ready(function () {
-	
+
 	// Top Bar //
 	$('.top-bar nav').addClass('hidden');
 	$('.menu-link').on('click', function (
@@ -36,7 +36,7 @@ $(document).ready(function () {
 		}
 		goToSectionID(des);
 	})
-	
+
 	// Local Scroll //
 	$('#mainnav li').localScroll({
 		duration: 1000
@@ -44,13 +44,13 @@ $(document).ready(function () {
 	$('.logo').localScroll({
 		duration: 1000
 	});
-	
+
 	// One Page Nav //
 	$('.top-bar').onePageNav({
 		currentClass: 'current',
 		filter: ':not(.external)'
 	});
-	
+
 	// Calculate the viewport height //
 	var viewHeight = $(window).height();
 	$("#intro").css({
@@ -86,30 +86,30 @@ $(document).ready(function () {
     });
     return false;
 	});
-	
+
 	// Flexslider
 	// Can also be used with $(document).ready()
 	$('.flexslider').flexslider({
 		animation: "slide"
 	});
-	
+
 	// Tabs //
 	$('#schedule-tabs a').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
 	})
-	
+
 	// Tooltip //
 	$("[rel=tooltip]").tooltip();
 	$("[data-rel=tooltip]").tooltip();
-	
+
 	//.parallax(xPosition, speedFactor, outerHeight) options:
 	//xPosition - Horizontal position of the element
 	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
 	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
 	$('#intro').parallax("50%", 0.1);
 	$('#venue').parallax("50%", 0.02);
-	
+
 	// Carousel //
 	$(".speakers-carousel").carousel({
 		dispItems: 1,
@@ -122,36 +122,36 @@ $(document).ready(function () {
 		effect: "slide",
 		animSpeed: "slow"
 	});
-	
+
 	// Toggle //
 	$('.toggle-item-title').click(function () {
 		$(this).next().slideToggle();
 		$(this).toggleClass(
 			'ui-state-active');
 	});
-	
+
 	// Countdown //
 	$('#countdown_timer').countdown({
-		// new Date(year, mth - 1 (april = 4 - 1 = 3), day, hr, min, sec) - date/time to count down to 
-		// or numeric for seconds offset, or string for unit offset(s): 
-		until: new Date(2015, 6, 17), 
+		// new Date(year, mth - 1 (april = 4 - 1 = 3), day, hr, min, sec) - date/time to count down to
+		// or numeric for seconds offset, or string for unit offset(s):
+		until: new Date(2015, 6, 17),
 		timezone: 1,
-		layout: 
+		layout:
 			'<ul id="counter_first">' +
 			'{d<}<li class="days"><em>{dn}</em> Days</li>{d>}' +
 			'{h<}<li class="hours"><em>{hn}</em> Hours</li>{h>}' +
-			'</ul><ul id="counter_second">' + 
+			'</ul><ul id="counter_second">' +
 			'{m<}<li class="minutes"><em>{mn}</em> Minutes</li>{m>}' +
 			'{s<}<li class="seconds"><em>{sn}</em> Seconds</li>{s>}' +
 			'</ul>',
 		onTick: function() {
-			countdownAnimation();		
+			countdownAnimation();
 		}
 	});
 
 	countdownArcs();
 
-	function countdownArcs() { 
+	function countdownArcs() {
 
 		$("#circular_countdown_days")
 			.drawArc({
@@ -165,43 +165,43 @@ $(document).ready(function () {
 				start: 0,
 				end:10
 			});
-		$("circular_countdown_hours")	
+		$("circular_countdown_hours")
 		.drawArc({
 				layer: true,
 				name: "hours",
 				strokeStyle: "rgba(101,127,129,0.2)",
 				strokeWidth: 10,
-				x: 257, 
+				x: 257,
 				y: 100,
 				radius: 63,
 				start: 0,
 				end:10
 			});
-		$("circular_countdown_minutes")	
+		$("circular_countdown_minutes")
 			.drawArc({
 				layer: true,
 				name: "minutes",
 				strokeStyle: "rgba(255,255,0,0.3)",
 				strokeWidth: 10,
-				x: 437, 
+				x: 437,
 				y: 100,
 				radius: 63,
 				start: 0,
 				end:10
 			});
-		$("circular_countdown_seconds")		
+		$("circular_countdown_seconds")
 			.drawArc({
 				layer: true,
 				name: "seconds",
 				strokeStyle: "rgba(255,0,255,0.3)",
 				strokeWidth: 10,
-				x: 617, 
+				x: 617,
 				y: 100,
 				radius: 63,
 				start: 0,
 				end:10
 			})
-					
+
 	}
 
 	function countdownAnimation() {
@@ -231,7 +231,7 @@ $(document).ready(function () {
 		$('.register-box').append('<h2>We are at capacity and can no longer accept registrations.</h2>');
 		$('.register-box').append('<button class="btn btn-large btn-primary disabled" disabled="true" id="register-button">Sold Out</button>');
 	}
-	
+
 	// Google Map //
 	$('#map_canvas').gmap({
 		'center': new google.maps.LatLng(12.9732486, 77.6197981), // Change this to your desired latitude and longitude
@@ -257,7 +257,7 @@ $(document).ready(function () {
 		}]
 	});
 	var image = {
-		url: 'images/marker.png',
+		url: '/images/marker.png',
 		// This marker is 51 pixels wide by 63 pixels tall.
 		size: new google.maps.Size(40, 30),
 		// The origin for this image is 0,0.
@@ -285,6 +285,6 @@ $(document).ready(function () {
 			media : {}
 		}
 	});
-	
-	// end		
+
+	// end
 })

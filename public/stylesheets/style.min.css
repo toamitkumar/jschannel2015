@@ -300,7 +300,7 @@ select:focus:invalid:focus {
     top: 60px;
 }
 .top-bar .logo span {
-    background: url("../images/logo.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url('/images/logo.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     background-position: 0 0;
     display: inline-block;
     height: 40px;
@@ -381,7 +381,7 @@ select:focus:invalid:focus {
     top: 19px;
 }
 .top-bar.alt .logo span {
-    background: url("../images/logo-hover.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background: url('/images/logo-hover.png') no-repeat scroll 0 0 rgba(0, 0, 0, 0);
     text-shadow: none;
 }
 .top-bar.alt .logo span {
@@ -410,7 +410,7 @@ nav select {
     display: none;
 }
 #intro {
-    background: url(../images/backgrounds/intro.jpg) center center no-repeat fixed;
+    background: url('/images/backgrounds/intro.jpg') center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -442,7 +442,7 @@ nav select {
     background: none repeat scroll 0 0 #fff;
 }
 #register {
-    background: url(../images/backgrounds/intro.jpg) center center no-repeat fixed;
+    background: url('/images/backgrounds/intro.jpg') center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -472,7 +472,7 @@ nav select {
     background: #F2BC47;
 }
 #venue {
-    background: url(../images/backgrounds/venue.jpg) center center no-repeat fixed;
+    background: url('/images/backgrounds/venue.jpg') center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -503,7 +503,7 @@ nav select {
 }
 #newsletter {
     //background: #E7EBED;
-    background: url(../images/backgrounds/intro.jpg) center center no-repeat fixed;
+    background: url('/images/backgrounds/intro.jpg') center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1197,7 +1197,7 @@ a.rss:hover {
 .carouselslider ul li:before {
     content: ''!important;
     margin: 0!important;
-    padding: 0!important
+    padding: 0!important;
 }
 .carouselslider ul li {
     display: inline-block;
@@ -1299,11 +1299,11 @@ a.rss:hover {
     transition: all .4s ease-in-out;
 }
 .carousel-previous {
-    background: url("../images/carousel_prev.png") no-repeat scroll right bottom rgba(255, 255, 255, 1);
+    background: url('/images/carousel_prev.png') no-repeat scroll right bottom rgba(255, 255, 255, 1);
     left: 0px !important;
 }
 .carousel-next {
-    background: url("../images/carousel_next.png") no-repeat scroll left bottom rgba(255, 255, 255, 1);
+    background: url('/images/carousel_next.png') no-repeat scroll left bottom rgba(255, 255, 255, 1);
     right: 0px !important;
 }
 .carouselslider > .carousel-previous.disabled {
@@ -1343,7 +1343,7 @@ a.rss:hover {
     width: 1%;
 }
 .tab-fillspace li:after {} .tab-fillspace li.active {} .tab-fillspace li.active:after {
-    background: url("../images/tri_down_dark.png") no-repeat scroll 50% 0 transparent;
+    background: url('/images/tri_down_dark.png') no-repeat scroll 50% 0 transparent;
     content: "";
     display: block;
     height: 7px;
@@ -1392,11 +1392,11 @@ a.rss:hover {
     cursor: pointer;
 }
 .toggle-item-title {
-    background: url(../images/icons/toggle.png) scroll no-repeat right 5px transparent;
+    background: url('/images/icons/toggle.png') scroll no-repeat right 5px transparent;
     padding: 0 32px 0 0;
 }
 .toggle-item-title.event-title.ui-state-active {
-    background: url(../images/icons/toggle-close.png) scroll no-repeat right 5px transparent;
+    background: url('/images/icons/toggle-close.png') scroll no-repeat right 5px transparent;
     padding: 0 32px 0 0;
 }
 .modal {
@@ -1538,7 +1538,7 @@ a.rss:hover {
     width: 100%;
 }
 .event-content:before {
-    background: url("../images/tri_left.png") no-repeat scroll 0 0 transparent;
+    background: url('/images/tri_left.png') no-repeat scroll 0 0 transparent;
     content: " ";
     height: 16px;
     left: -8px;
@@ -1977,10 +1977,10 @@ a.coming-soon:hover span {
   display:none;
 }
 a.coming-soon:hover:before {
-  content: "Coming Soon!"
+  content: "Coming Soon!";
 }
 a.coming-soon:hover:after {
-  content: ""
+  content: "";
 }
 
 .team-member {
