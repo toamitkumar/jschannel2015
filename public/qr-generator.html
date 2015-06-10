@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link rel="stylesheet" href="stylesheets/bootstrap.min.css">-->
+    <link rel="stylesheet" href="stylesheets/qr-style.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="form-container">
+        <input id="text" type="text" class="gen-input"/>
+        <button onclick="makeCode()" class="btn btn-primary gen-button">&#10003;</button>
+      </div>
+      <!--<div class="header-box"></div>-->
+      <div id="qrcode" class="qr-container"></div>
+    </div>
+
+    <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="scripts/qr-gen/qr-gen.min.js"></script>
+    <script type="text/javascript" src="scripts/qr-gen/qr-control.js"></script>
+  </body>

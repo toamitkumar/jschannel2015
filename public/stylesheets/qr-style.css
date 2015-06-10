@@ -1,0 +1,41 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.form-container{
+    display:flex;
+}
+
+.gen-button{
+    /*width: 8%;*/
+    flex: 1 30px;
+    font-size: 2em;
+    height : 50px;
+    background: #387038;
+    border : none;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
+}
+
+.gen-input{
+    /*width: 90%;*/
+    flex: 20;
+    margin: auto;
+    font-size: 2em;
+    height : 50px;
+}
+
+.qr-container{
+    flex: 1;
+    width: 100%;
+    display: flex;
+}
+
+.qr-container > img{
+    margin: auto;
+    max-width:100%;
+    max-height:100%;
+}
