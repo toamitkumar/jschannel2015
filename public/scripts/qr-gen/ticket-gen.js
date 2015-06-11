@@ -40,15 +40,45 @@ var ticketGenerator = function () {
     if (emailText.length > 0) {
       //_verifyUser(emailText);
 
-      var userData = {userEmailId:emailText};
+      var userData = {userEmailId: emailText};
       _createTicket(userData);
     }
 
     return false; //form disabling form submission
   };
 
+  var _createPDF = function (canvas) {
+    var imgData = canvas.toDataURL('image/jpeg', 1.0);
+    var doc = new jsPDF();
+    doc.addImage(imgData, 'JPEG', 15, 40, 180, 71);
+    doc.save('JSCHANNEL-ticket.pdf');
+  };
+
+  var _createPNG = function (canvas) {
+    var imageData = canvas.toDataURL('image/png', 1.0);
+    var download = document.createElement('a');
+    download.href = imageData;
+    download.download = 'JSCHANNEL-ticket.png';
+    download.click();
+  };
+
+  var downloadTicket = function (fileType) {
+    $('.download-section').hide();
+    html2canvas($('.ticket-container')[0], {
+      onrendered: function (canvas) {
+        $('.download-section').show();
+        if (fileType === 'pdf') {
+          _createPDF(canvas);
+        } else if (fileType === 'png') {
+          _createPNG(canvas);
+        }
+      }
+    });
+  };
+
   return {
-    generator: generator
+    generator: generator,
+    downloadTicket: downloadTicket
   }
 
 }();
