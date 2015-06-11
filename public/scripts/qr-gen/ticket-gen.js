@@ -8,13 +8,39 @@ var ticketGenerator = function () {
     qrcode.makeCode(text);
   };
 
-  var generator = function(){
-    var domElement = document.getElementById('qr-code');
-    var text = document.getElementById('email-field').value;
-    $('#qr-code').empty();
-    _makeCode(text,domElement);
-    return false;
-  } ;
+  var _verifyUser = function (emailIdToCheck) {
+    $.get('data/mock-user-data.json', function (result, status) {
+      var attendeesList = result.data;
+      for (var i = 0; i < attendeesList.length; ++i) {
+        if (emailIdToCheck === attendeesList[i].userEmailId) {
+          _createTicket(attendeesList[i]);
+          return;
+        }
+      }
+      _userNotFoundError(emailIdToCheck);
+    });
+  };
+
+  var _userNotFoundError = function (email) {
+    $('.user-not-found').empty().text('User with Email '+email+' has not registered !');
+    $('.error-area').show();
+  };
+
+  var _createTicket = function (userData) {
+    var qrArea = $('#qr-code').empty()[0];
+    _makeCode(userData.userEmailId,qrArea);
+    console.log(userData);
+    $('.ticket-container').show();
+  };
+
+  var generator = function () {
+    var emailText = document.getElementById('email-field').value;
+    $('.error-area').hide();
+    $('.ticket-container').hide();
+    if (emailText.length > 0) {
+      _verifyUser(emailText);
+    }
+  };
 
   return {
     generator: generator

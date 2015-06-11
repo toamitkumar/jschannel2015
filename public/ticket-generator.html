@@ -9,19 +9,23 @@
 <body>
 <div class="ticket-gen-title-text">JSChannel 2015 Ticket Generator</div>
 <div class="form-container">
-    <form onsubmit="return ticketGenerator.generator()">
+    <form onsubmit="return false">
         <input type="email" id="email-field" class="email-input box-shadow" placeholder="Enter email address"/>
-        <input type="submit" value="Generate Ticket" class="submit-button box-shadow"/>
+        <input type="submit" onclick="ticketGenerator.generator()" value="Generate Ticket"
+               class="submit-button box-shadow"/>
     </form>
 </div>
 <div class="ticket-container">
     <div id="qr-code" class="qr-code-container"></div>
     <!--<div class="ticket-details">-->
-        <!--<div class="attendee-name">Sample Name</div>-->
-        <!--<div class="attendee-email">abc@xyz.com</div>-->
-        <!--<div class="attendee-ticketValue">Rs 1000</div>-->
+    <!--<div class="attendee-name">Sample Name</div>-->
+    <!--<div class="attendee-email">abc@xyz.com</div>-->
+    <!--<div class="attendee-ticketValue">Rs 1000</div>-->
 
     <!--</div>-->
+</div>
+<div class="error-area">
+    <div class="user-not-found"></div>
 </div>
 
 

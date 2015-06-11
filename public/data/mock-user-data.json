@@ -1,0 +1,23 @@
+{
+  "result":"Success",
+  "data":[
+    {
+      "userName":"attendee1",
+      "userEmailId":"attendee1@example.com",
+      "ticketName":"ticket-1",
+      "ticketPrice":"1000",
+      "ticketCurrency":"INR",
+      "discountType":"CODE",
+      "discountAmount":"50"
+    },
+    {
+      "userName":"attendee2",
+      "userEmailId":"attendee2@example.com",
+      "ticketName":"ticket-2",
+      "ticketPrice":"600",
+      "ticketCurrency":"INR",
+      "discountType":"CODE",
+      "discountAmount":"70"
+    }
+  ]
+}

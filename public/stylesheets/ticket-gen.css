@@ -3,13 +3,6 @@ body {
   padding: 0;
 }
 
-.main-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  padding: 15px;
-}
-
 .ticket-gen-title-text {
   text-align: center;
   padding: 25px;
@@ -18,7 +11,6 @@ body {
   background-color: rgb(80, 196, 201);
 }
 
-/*************/
 .form-container {
   padding: 20px;
   width: 70%;
@@ -41,40 +33,49 @@ body {
   text-align: center;
   position: relative;
   width: 90%;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .submit-button {
   display: block;
   width: 120px;
-  padding:10px;
+  padding: 10px;
   position: relative;
   border: none;
   border-radius: 4px;
   height: 40px;
-  margin:10px auto;
+  margin: 10px auto;
   background-color: rgba(236, 162, 4, 0.61);
 }
 
-.submit-button:hover,.submit-button:active {
+.submit-button:hover, .submit-button:active {
   background-color: rgba(236, 162, 4, 1);
 }
 
-.ticket-container{
+.ticket-container, .error-area {
   position: relative;
-  display: block;
+  display: none;
   border: 1px solid lightblue;
 }
-.qr-code-container{
+
+.qr-code-container {
   position: relative;
   width: 30%;
   padding: 20px;
   margin: 0 auto;
 }
 
-.qr-code-container > img{
-  width:100%;
+.qr-code-container > img {
+  width: 100%;
 }
+
 .ticket-details {
 
+}
+
+.user-not-found {
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+  font-family: sans-serif;
+  color: red;
 }
