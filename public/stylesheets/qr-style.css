@@ -15,16 +15,21 @@ body {
 }
 
 .gen-button {
-    /*width: 8%;*/
-    
     flex: 1 30px;
-    font-size: 2em;
-    height: 50px;
+    font-size: 1.5em;
     background: #387038;
     border: none;
-    border-radius: 10px;
+    border-radius: 4px;
     color: white;
     margin: 5px;
+    margin-left: 11px;
+    padding: 13px;
+}
+
+.gen-button:hover,
+.gen-button:active {
+    background: darkcyan;
+    color: wheat;
 }
 
 .gen-input {
