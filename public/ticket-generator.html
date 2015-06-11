@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/ticket-gen.css">
+</head>
+<body>
+<div class="ticket-gen-title-text">JSChannel 2015 Ticket Generator</div>
+<!--<div class="main-container">-->
+<!--<div class="form-container">-->
+<!--<input id="text" type="text" class="gen-input"/>-->
+<!--<button onclick="makeCode()" class="btn btn-primary gen-button">&#10003;</button>-->
+<!--</div>-->
+<!--<div id="qrcode" class="qr-container"></div>-->
+<!--</div>-->
+
+<div class="form-container">
+    <form onsubmit="return ticketGenerator.generator()">
+        <input type="email" id="email-field" class="email-input box-shadow" placeholder="Enter email address"/>
+        <input type="submit" value="Generate Ticket" class="submit-button box-shadow"/>
+    </form>
+</div>
+<div class="ticket-container">
+    <div id="qr-code" class="qr-code-container"></div>
+    <!--<div class="ticket-details">-->
+        <!--<div class="attendee-name">Sample Name</div>-->
+        <!--<div class="attendee-email">abc@xyz.com</div>-->
+        <!--<div class="attendee-ticketValue">Rs 1000</div>-->
+
+    <!--</div>-->
+</div>
+
+
+<script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="scripts/qr-gen/qr-gen.min.js"></script>
+<script type="text/javascript" src="scripts/qr-gen/ticket-gen.js"></script>
+</body>
