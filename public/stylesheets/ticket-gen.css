@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  min-width: 480px;
 }
 
 .ticket-gen-title-text {
   text-align: center;
   padding: 25px;
-  font-family: sans-serif;
   font-size: 18px;
   background-color: rgb(80, 196, 201);
 }
@@ -55,27 +56,77 @@ body {
 .ticket-container, .error-area {
   position: relative;
   display: none;
+  max-height: 340px;
+  padding: 0 10px 0 10px;
+}
+
+.ticket-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.error-area {
   border: 1px solid lightblue;
+}
+
+.ticket-body {
+  position: relative;
+  border: 1px solid lightblue;
+  overflow: hidden;
+
+}
+
+.ticket-title {
+  text-align: center;
+  padding: 10px;
+  background: #50C4C9;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  box-shadow: 1px 0 3px #888888;
+  -webkit-box-shadow: 1px 0 3px #888888;
+  -moz-box-shadow: 1px 0 3px #888888;
 }
 
 .qr-code-container {
   position: relative;
-  width: 30%;
   padding: 20px;
-  margin: 0 auto;
+  width: 30%;
+  display: inline-block;
+  border-right: 1px solid rgba(181, 181, 181, 0.35);
 }
 
 .qr-code-container > img {
   width: 100%;
+  height: 100%;
+  max-width: 260px;
+  max-height: 260px;
+  margin: 0 auto;
 }
 
-.ticket-details {
 
+.ticket-details-table{
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 60%;
+  height: 200px;
+  /*background: url('../images/tickets/logobg.png') 0 160px no-repeat;*/
+  /*background-size: contain;*/
+}
+
+.title-text{
+  font-weight: bold;
+}
+
+.ticket-title > span {
+  position: absolute;
+  right: 50px;
+  font-style: italic;
 }
 
 .user-not-found {
   padding: 40px 20px 40px 20px;
   text-align: center;
-  font-family: sans-serif;
   color: red;
 }

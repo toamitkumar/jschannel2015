@@ -22,13 +22,13 @@ var ticketGenerator = function () {
   };
 
   var _userNotFoundError = function (email) {
-    $('.user-not-found').empty().text('User with Email '+email+' has not registered !');
+    $('.user-not-found').empty().text('User with Email ' + email + ' has not registered !');
     $('.error-area').show();
   };
 
   var _createTicket = function (userData) {
     var qrArea = $('#qr-code').empty()[0];
-    _makeCode(userData.userEmailId,qrArea);
+    _makeCode(userData.userEmailId, qrArea);
     console.log(userData);
     $('.ticket-container').show();
   };
@@ -38,11 +38,17 @@ var ticketGenerator = function () {
     $('.error-area').hide();
     $('.ticket-container').hide();
     if (emailText.length > 0) {
-      _verifyUser(emailText);
+      //_verifyUser(emailText);
+
+      var userData = {userEmailId:emailText};
+      _createTicket(userData);
     }
+
+    return false; //form disabling form submission
   };
 
   return {
     generator: generator
   }
+
 }();
