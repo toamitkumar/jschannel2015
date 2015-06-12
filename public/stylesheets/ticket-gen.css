@@ -53,18 +53,15 @@ body {
   background-color: rgba(236, 162, 4, 1);
 }
 
- .error-area {
+.error-area, .loading-area {
   position: relative;
   display: none;
   max-height: 340px;
   padding: 0 10px 0 10px;
   background: white;
-
-}
-
-.error-area {
   border: 1px solid lightblue;
 }
+
 
 .ticket-title {
   text-align: center;
@@ -82,7 +79,7 @@ body {
   margin: auto;
 }
 
-.qr-code-container{
+.qr-code-container {
   padding: 15px;
   margin: auto;
 }
@@ -97,26 +94,30 @@ body {
   font-style: italic;
 }
 
-.user-not-found {
+.user-not-found ,.loading-box{
   padding: 40px 20px 40px 20px;
   text-align: center;
   color: red;
 }
 
-.pdf-button:hover,.pdf-button:active, .png-button:hover, .png-button:active{
-  background:black;
+.loading-box{
+  color: #103959;
+}
+
+.pdf-button:hover, .pdf-button:active, .png-button:hover, .png-button:active {
+  background: black;
   color: #ffffff;
 }
 
-.ticket-container{
+.ticket-container {
   display: none;
   /*display: flex;*/
   flex-direction: column;
   margin: 30px;
-  background-color:white ;
+  background-color: white;
 }
 
-.ticket-body{
+.ticket-body {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -124,13 +125,13 @@ body {
   overflow: hidden;
 }
 
-.download-section{
+.download-section {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
 }
 
-.pdf-button , .png-button {
+.pdf-button, .png-button {
   width: 30%;
   margin: auto;
   text-align: center;
@@ -140,14 +141,14 @@ body {
   padding: 10px;
 }
 
-.download-label{
+.download-label {
   width: 30%;
   margin: auto;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  .download-section , .ticket-body {
+  .download-section, .ticket-body {
     flex-direction: column;
   }
 }

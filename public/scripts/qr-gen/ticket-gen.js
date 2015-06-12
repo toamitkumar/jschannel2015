@@ -9,17 +9,14 @@ var ticketGenerator = function () {
   };
 
   var _verifyUser = function (emailIdToCheck) {
-    
-    $.get('/getAllUsers', function (result, status) {
-      //console.log(result.data);
-      var attendeesList = JSON.parse(JSON.parse(result).data);
-      for (var i = 0; i < attendeesList.length; ++i) {
-        if (emailIdToCheck === attendeesList[i].userEmailId) {
-          _createTicket(attendeesList[i]);
-          return;
-        }
+    $('.loading-area').show();
+    $.get('/getAllUsers?email=' + emailIdToCheck, function (result, status) {
+      $('.loading-area').hide();
+      if (result.length > 0) {
+        _createTicket(result[0]);
+      } else {
+        _userNotFoundError(emailIdToCheck);
       }
-      _userNotFoundError(emailIdToCheck);
     });
   };
 
@@ -88,7 +85,6 @@ var ticketGenerator = function () {
       }
     });
   };
-
 
 
   return {
