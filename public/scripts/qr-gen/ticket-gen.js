@@ -32,6 +32,9 @@ var ticketGenerator = function () {
     var qrArea = $('#qr-code').empty()[0];
     _makeCode(userData.userEmailId, qrArea);
     console.log(userData);
+    $('#attendee-name').text(userData.userName);
+    $('#attendee-email').text(userData.userEmailId);
+    $('#attendee-gender').text(userData.Gender);
     $('.ticket-container').css('display', 'flex');
   };
 
