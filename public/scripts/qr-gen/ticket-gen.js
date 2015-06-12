@@ -30,7 +30,7 @@ var ticketGenerator = function () {
     var qrArea = $('#qr-code').empty()[0];
     _makeCode(userData.userEmailId, qrArea);
     console.log(userData);
-    $('.ticket-container').show();
+    $('.ticket-container').css('display','flex');
   };
 
   var generator = function () {
