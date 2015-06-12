@@ -9,8 +9,26 @@ var ticketGenerator = function () {
   };
 
   var _verifyUser = function (emailIdToCheck) {
+
+    //function setHeader(xhr) {
+    //  xhr.setRequestHeader('email', 'jsconference@gmail.com');
+    //  xhr.setRequestHeader('secret_key', '8c52a901-69cf-4260-8359-1328e9f6e2cf');
+    //  return true;
+    //}
+    //$.ajax({
+    //  url: "https://www.townscript.com/api/registration/getRegisteredUsers",
+    //  data : {eventCode: "jschannel2015", email:'jsconference@gmail.com', secret_key:'8c52a901-69cf-4260-8359-1328e9f6e2cf'},
+    //  dataType: "jsonp",
+    //  type: "POST",
+    //  beforeSend: setHeader
+    //}).done(function (data) {
+    //  console.log('response', data);
+    //});
+    //
+
+
     $.get('data/mock-user-data.json', function (result, status) {
-      var attendeesList = result.data;
+      var attendeesList = JSON.parse(result.data);
       for (var i = 0; i < attendeesList.length; ++i) {
         if (emailIdToCheck === attendeesList[i].userEmailId) {
           _createTicket(attendeesList[i]);
@@ -30,7 +48,7 @@ var ticketGenerator = function () {
     var qrArea = $('#qr-code').empty()[0];
     _makeCode(userData.userEmailId, qrArea);
     console.log(userData);
-    $('.ticket-container').css('display','flex');
+    $('.ticket-container').css('display', 'flex');
   };
 
   var generator = function () {
@@ -47,11 +65,11 @@ var ticketGenerator = function () {
     return false; //form disabling form submission
   };
 
-  var _calculateHeightForPdf = function(){
+  var _calculateHeightForPdf = function () {
     var originalHeight = $('.ticket-container').height();
     var originalWidth = $('.ticket-container').width();
     var scaledWidth = 180;
-    var scaledHeight = (originalHeight/originalWidth)*scaledWidth;
+    var scaledHeight = (originalHeight / originalWidth) * scaledWidth;
     return scaledHeight;
   };
 
@@ -83,6 +101,8 @@ var ticketGenerator = function () {
       }
     });
   };
+
+
 
   return {
     generator: generator,

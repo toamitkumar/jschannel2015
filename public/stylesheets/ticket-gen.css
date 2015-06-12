@@ -19,11 +19,11 @@ body {
   position: relative;
 }
 
-/*.box-shadow {*/
-  /*box-shadow: 1px 1px 3px #888888;*/
-  /*-webkit-box-shadow: 1px 1px 3px #888888;*/
-  /*-moz-box-shadow: 1px 1px 3px #888888;*/
-/*}*/
+.box-shadow {
+  box-shadow: 1px 1px 3px #888888;
+  -webkit-box-shadow: 1px 1px 3px #888888;
+  -moz-box-shadow: 1px 1px 3px #888888;
+}
 
 .email-input {
   display: block;
@@ -53,30 +53,18 @@ body {
   background-color: rgba(236, 162, 4, 1);
 }
 
-/*.ticket-container, .error-area {*/
-  /*position: relative;*/
-  /*display: none;*/
-  /*max-height: 340px;*/
-  /*padding: 0 10px 0 10px;*/
-  /*background: white;*/
+ .error-area {
+  position: relative;
+  display: none;
+  max-height: 340px;
+  padding: 0 10px 0 10px;
+  background: white;
 
-/*}*/
+}
 
-/*.ticket-container {*/
-  /*max-width: 800px;*/
-  /*margin: 0 auto;*/
-/*}*/
-
-/*.error-area {*/
-  /*border: 1px solid lightblue;*/
-/*}*/
-
-/*.ticket-body {*/
-  /*position: relative;*/
-  /*border: 1px solid lightblue;*/
-  /*overflow: hidden;*/
-
-/*}*/
+.error-area {
+  border: 1px solid lightblue;
+}
 
 .ticket-title {
   text-align: center;
@@ -89,32 +77,9 @@ body {
   -moz-box-shadow: 1px 0 3px #888888;
 }
 
-/*.qr-code-container {*/
-  /*position: relative;*/
-  /*padding: 20px;*/
-  /*width: 30%;*/
-  /*display: inline-block;*/
-  /*border-right: 1px solid rgba(181, 181, 181, 0.35);*/
-/*}*/
-
-/*.qr-code-container > img {*/
-  /*width: 100%;*/
-  /*height: 100%;*/
-  /*max-width: 260px;*/
-  /*max-height: 260px;*/
-  /*margin: 0 auto;*/
-/*}*/
-
 .ticket-details-table {
   padding: 20px;
-  /*position: absolute;*/
-  /*top: 0;*/
-  /*left: 40%;*/
-  /*width: 60%;*/
-  /*height: 200px;*/
   margin: auto;
-  background: url('../images/tickets/logobg.png') 0 160px no-repeat;
-  background-size: contain;
 }
 
 .qr-code-container{
@@ -122,30 +87,22 @@ body {
   margin: auto;
 }
 
-/*.title-text {*/
-  /*font-weight: bold;*/
-/*}*/
+.title-text {
+  font-weight: bold;
+}
 
-/*.ticket-title > span {*/
-  /*position: absolute;*/
-  /*right: 50px;*/
-  /*font-style: italic;*/
-/*}*/
+.ticket-title > span {
+  position: absolute;
+  right: 50px;
+  font-style: italic;
+}
 
-/*.user-not-found {*/
-  /*padding: 40px 20px 40px 20px;*/
-  /*text-align: center;*/
-  /*color: red;*/
-/*}*/
+.user-not-found {
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+  color: red;
+}
 
-/*.pdf-button, .png-button {*/
-  /*padding: 10px;*/
-  /*display: inline-block;*/
-  /*margin: 10px;*/
-  /*border-radius: 3px;*/
-  /*border: 1px solid;*/
-  /*cursor: pointer;*/
-/*}*/
 .pdf-button:hover,.pdf-button:active, .png-button:hover, .png-button:active{
   background:black;
   color: #ffffff;
