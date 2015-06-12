@@ -9,26 +9,10 @@ var ticketGenerator = function () {
   };
 
   var _verifyUser = function (emailIdToCheck) {
-
-    //function setHeader(xhr) {
-    //  xhr.setRequestHeader('email', 'jsconference@gmail.com');
-    //  xhr.setRequestHeader('secret_key', '8c52a901-69cf-4260-8359-1328e9f6e2cf');
-    //  return true;
-    //}
-    //$.ajax({
-    //  url: "https://www.townscript.com/api/registration/getRegisteredUsers",
-    //  data : {eventCode: "jschannel2015", email:'jsconference@gmail.com', secret_key:'8c52a901-69cf-4260-8359-1328e9f6e2cf'},
-    //  dataType: "jsonp",
-    //  type: "POST",
-    //  beforeSend: setHeader
-    //}).done(function (data) {
-    //  console.log('response', data);
-    //});
-    //
-
-
-    $.get('data/mock-user-data.json', function (result, status) {
-      var attendeesList = JSON.parse(result.data);
+    
+    $.get('/getAllUsers', function (result, status) {
+      //console.log(result.data);
+      var attendeesList = JSON.parse(JSON.parse(result).data);
       for (var i = 0; i < attendeesList.length; ++i) {
         if (emailIdToCheck === attendeesList[i].userEmailId) {
           _createTicket(attendeesList[i]);
