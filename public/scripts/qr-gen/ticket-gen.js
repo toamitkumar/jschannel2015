@@ -53,7 +53,7 @@ var ticketGenerator = function () {
     var originalHeight = $('.ticket-container').height();
     var originalWidth = $('.ticket-container').width();
     var scaledWidth = 180;
-    var scaledHeight = (originalHeight / originalWidth) * scaledWidth;
+    var scaledHeight = (originalHeight / originalWidth) * scaledWidth * 0.8;
     return scaledHeight;
   };
 
