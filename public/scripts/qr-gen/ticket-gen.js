@@ -38,19 +38,27 @@ var ticketGenerator = function () {
     $('.error-area').hide();
     $('.ticket-container').hide();
     if (emailText.length > 0) {
-      //_verifyUser(emailText);
+      _verifyUser(emailText);
 
-      var userData = {userEmailId: emailText};
-      _createTicket(userData);
+      //var userData = {userEmailId: emailText};
+      //_createTicket(userData);
     }
 
     return false; //form disabling form submission
   };
 
+  var _calculateHeightForPdf = function(){
+    var originalHeight = $('.ticket-container').height();
+    var originalWidth = $('.ticket-container').width();
+    var scaledWidth = 180;
+    var scaledHeight = (originalHeight/originalWidth)*scaledWidth;
+    return scaledHeight;
+  };
+
   var _createPDF = function (canvas) {
     var imgData = canvas.toDataURL('image/jpeg', 1.0);
     var doc = new jsPDF();
-    doc.addImage(imgData, 'JPEG', 15, 40, 180, 71);
+    doc.addImage(imgData, 'JPEG', 15, 40, 180, _calculateHeightForPdf());
     doc.save('JSCHANNEL-ticket.pdf');
   };
 
