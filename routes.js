@@ -19,5 +19,10 @@ exports.endpoints = [
 		method: 'GET',
 		path: '/api/users/unsubscribe',
 		config: user.unsubscribe
+	},
+	{
+		method: 'GET',
+		path: '/getAllUsers',
+		config: user.getAll
 	}
 ];
