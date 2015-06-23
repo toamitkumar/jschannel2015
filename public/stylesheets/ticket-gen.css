@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  min-width: 480px;
+}
+
+.ticket-gen-title-text {
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+  background-color: rgb(80, 196, 201);
+}
+
+.form-container {
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.box-shadow {
+  box-shadow: 1px 1px 3px #888888;
+  -webkit-box-shadow: 1px 1px 3px #888888;
+  -moz-box-shadow: 1px 1px 3px #888888;
+}
+
+.email-input {
+  display: block;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  text-align: center;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.submit-button {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  position: relative;
+  border: none;
+  border-radius: 4px;
+  height: 40px;
+  margin: 10px auto;
+  background-color: rgba(236, 162, 4, 0.61);
+}
+
+.submit-button:hover, .submit-button:active {
+  background-color: rgba(236, 162, 4, 1);
+}
+
+.error-area, .loading-area {
+  position: relative;
+  display: none;
+  max-height: 340px;
+  padding: 0 10px 0 10px;
+  background: white;
+  border: 1px solid lightblue;
+}
+
+
+.ticket-title {
+  text-align: center;
+  padding: 10px;
+  background: #50C4C9;
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+  box-shadow: 1px 0 3px #888888;
+  -webkit-box-shadow: 1px 0 3px #888888;
+  -moz-box-shadow: 1px 0 3px #888888;
+}
+
+.ticket-details-table {
+  padding: 20px;
+  margin: auto;
+}
+
+.qr-code-container {
+  padding: 15px;
+  margin: auto;
+}
+
+.title-text {
+  font-weight: bold;
+}
+
+.ticket-title > span {
+  position: absolute;
+  right: 50px;
+  font-style: italic;
+}
+
+.user-not-found ,.loading-box{
+  padding: 40px 20px 40px 20px;
+  text-align: center;
+  color: red;
+}
+
+.loading-box{
+  color: #103959;
+}
+
+.pdf-button:hover, .pdf-button:active, .png-button:hover, .png-button:active {
+  background: black;
+  color: #ffffff;
+}
+
+.ticket-container {
+  display: none;
+  /*display: flex;*/
+  flex-direction: column;
+  margin: 30px;
+  background-color: white;
+}
+
+.ticket-body {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  border: 1px solid lightblue;
+  overflow: hidden;
+}
+
+.download-section {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+}
+
+.pdf-button, .png-button {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.download-label {
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .download-section, .ticket-body {
+    flex-direction: column;
+  }
+}
