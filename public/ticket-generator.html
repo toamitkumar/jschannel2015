@@ -1,52 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="stylesheets/ticket-gen.css">
-</head>
-<body>
-<div class="ticket-gen-title-text">JSChannel 2015 Ticket Generator</div>
-<div class="form-container">
-    <form onsubmit="return ticketGenerator.generator()">
+  </head>
+  <body>
+    <div class="ticket-gen-title-text">JSChannel 2015 Ticket Generator</div>
+    <div class="form-container">
+      <form onsubmit="return ticketGenerator.generator()">
         <input type="email" id="email-field" class="email-input box-shadow" autocomplete="off"
                placeholder="Enter email address"
                required="true"/>
         <input type="submit" value="Generate Ticket" class="submit-button box-shadow"/>
-    </form>
-</div>
-<div class="ticket-container">
-    <div class="ticket-title">JS Channel 2015<span></span></div>
-    <div class="ticket-body box-shadow">
-        <div id="qr-code" class="qr-code-container"></div>
-        <table class="ticket-details-table">
-            <tr>
-                <td class="attendee-detail title-text">Name:</td>
-                <td id="attendee-name" class="attendee-detail">Sample Name</td>
-            </tr>
-            <tr>
-                <td class="attendee-detail title-text">Email:</td>
-                <td id="attendee-email" class="attendee-detail">abcd@xyz.com</td>
-            </tr>
-            <tr>
-                <td class="attendee-detail title-text">Gender:</td>
-                <td id="attendee-gender" class="attendee-detail">Male</td>
-            </tr>
-        </table>
+      </form>
     </div>
-    <div class="download-section">
+    <div class="ticket-container box-shadow">
+      <div class="ticket-title">Your Ticket for <div class="box">JS Channel Conf 2015</div></div>
+      <div class="ticket-head"><div class="organizer-info">Organizer : <br>JsChannel 2015</div><img src="images/logo.png"></div>
+      <div class="ticket-body">
+        <div class="info-section">
+          <div class="name-section">Hi, <span id="attendee-name"></span></div>
+          <div>Thank you for purchasing your ticket for <strong>JSChannel Conference</strong><br><br>Your ticket details are as follows:</div>
+          <div class="info-heading">Event Details:</div>
+          <div>Organizer : <strong>JSChannel</strong></div>
+          <div>Venue : <strong>Vivanta by Taj, MG Road, Bangalore</strong></div>
+          <div>Event Link : <a href="http://2015.jschannel.com/"><strong>2015.jschannel.com</strong></a></div>
+          <div class="info-heading">Message from Organizer</div>
+          <div>Please make sure to bring a print of this ticket at the conference venue. It will help us smoothen the process at the registration desk</div>
+          <div>Need any help? Write to us at info@jschannel.com . We will get back to you shortly! </div>
+        </div>
+        <div id="qr-code" class="qr-code-container"></div>
+        <!--<table class="ticket-details-table">-->
+        <!--<tr>-->
+        <!--<td class="attendee-detail title-text">Name:</td>-->
+        <!--<td id="attendee-name" class="attendee-detail">Sample Name</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td class="attendee-detail title-text">Email:</td>-->
+        <!--<td id="attendee-email" class="attendee-detail">abcd@xyz.com</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+        <!--<td class="attendee-detail title-text">Gender:</td>-->
+        <!--<td id="attendee-gender" class="attendee-detail">Male</td>-->
+        <!--</tr>-->
+        <!--</table>-->
+      </div>
+      <div class="download-section">
         <div class="download-label">Download Ticket as</div>
         <div class="pdf-button" onclick="ticketGenerator.downloadTicket('pdf')">PDF</div>
         <div class="png-button" onclick="ticketGenerator.downloadTicket('png')">PNG</div>
+      </div>
     </div>
-</div>
-<div class="error-area">
-    <div class="user-not-found"></div>
-</div>
-<div class="loading-area">
-    <div class="loading-box"><img src="images/ticket/ajax-loader.gif" /><div> Verifying Email Id....</div></div>
-</div>
+    <div class="error-area">
+      <div class="user-not-found"></div>
+    </div>
+    <div class="loading-area">
+      <div class="loading-box"><img src="images/ticket/ajax-loader.gif"/>
+
+        <div> Verifying Email Id....</div>
+      </div>
+    </div>
     <script type="text/javascript" src="scripts/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="scripts/html2canvas.js"></script>
     <script type="text/javascript" src="scripts/jspdf.min.js"></script>
