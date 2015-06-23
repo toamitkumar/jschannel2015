@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
   min-width: 480px;
+  background:#ffffff;
 }
 
 .ticket-gen-title-text {
@@ -66,7 +67,7 @@ body {
 .ticket-title {
   text-align: center;
   padding: 10px;
-  background: #50C4C9;
+  background: #42C0EE;
   border-radius: 3px 3px 0 0;
   overflow: hidden;
   box-shadow: 1px 0 3px #888888;
@@ -88,10 +89,35 @@ body {
   font-weight: bold;
 }
 
-.ticket-title > span {
+.ticket-title  {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.ticket-title > .box{
+  display: inline-block;
+  border: 2px solid white;
+  padding: 5px;
+}
+
+.ticket-head{
+  background: #ddd;
+  position: relative;
+}
+
+.ticket-head > img{
   position: absolute;
-  right: 50px;
-  font-style: italic;
+  right: 10px;
+  top: 5px;
+}
+
+.organizer-info{
+  font-size: 1em;
+  font-weight: 600;
+  color: #0E6898;
+  clear: both;
+  padding: 5px;
 }
 
 .user-not-found ,.loading-box{
@@ -145,6 +171,22 @@ body {
   width: 30%;
   margin: auto;
   text-align: center;
+}
+
+.info-heading{
+  font-size: 1.2em;
+  color:#BFB5A0;
+  margin: 10px 0;
+}
+
+.name-section{
+  font-size: 1.5em;
+  color:#BFB5A0;
+  margin: 10px 0;
+}
+
+.info-section{
+  margin-left : 20px;
 }
 
 @media (max-width: 768px) {

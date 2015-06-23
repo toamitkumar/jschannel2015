@@ -42,7 +42,7 @@ var ticketGenerator = function () {
     if (emailText.length > 0) {
       _verifyUser(emailText);
 
-      //var userData = {userEmailId: emailText};
+      //var userData = {userEmailId: emailText, userName:'sohasfbfbm', Gender:'Male'};
       //_createTicket(userData);
     }
 
